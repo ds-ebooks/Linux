@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Linux入门笔记]]></title>
+        <description><![CDATA[Linux入门必备知识.]]></description>
+        <link>http://ds-ebooks.github.io/Linux/</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Fri, 21 Sep 2018 08:32:03 GMT</lastBuildDate>
+        <atom:link href="http://ds-ebooks.github.io/Linux/sitmap.xml" rel="self" type="application/rss+xml"/>
+        <author><![CDATA[S]]></author>
+        <managingEditor><![CDATA[super@ds-vip.top]]></managingEditor>
+        <webMaster><![CDATA[super@ds-vip.top]]></webMaster>
+        <category><![CDATA[gitbook]]></category>
+        <item>
+            <title><![CDATA[简介]]></title>
+            <description><![CDATA[Linux入门知识，参考https://billie66.github.io/TLCL/book/ 写的总结。]]></description>
+            <link>http://ds-ebooks.github.io/Linux/</link>
+            <guid isPermaLink="true">http://ds-ebooks.github.io/Linux/</guid>
+            <dc:creator><![CDATA[S]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[“bash” 是 “Bourne Again SHell” 的首字母缩写， 所指的是这样一个事实，bash 是最初 Unix 上由 Steve Bourne 写成 shell 程序 sh 的增强版。能够访问Shell的终端仿真器称为“terminal”。]]></description>
+            <link>http://ds-ebooks.github.io/Linux/post/01-learn-shell.html</link>
+            <guid isPermaLink="true">http://ds-ebooks.github.io/Linux/post/01-learn-shell.html</guid>
+            <dc:creator><![CDATA[S]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[大多数程序用配置文件来存储程序设置， 一些程序会根据环境变量来调整他们的行为。shell 在环境中存储了两种基本类型的数据：Shell 变量是 bash 存放的少量数据，剩下的都是 环境变量。另外还有别名和 shell 函数。]]></description>
+            <link>http://ds-ebooks.github.io/Linux/post/02-config-and-environments.html</link>
+            <guid isPermaLink="true">http://ds-ebooks.github.io/Linux/post/02-config-and-environments.html</guid>
+            <dc:creator><![CDATA[S]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[[TOC]]]></description>
+            <link>http://ds-ebooks.github.io/Linux/post/03-task-and-tools-1.html</link>
+            <guid isPermaLink="true">http://ds-ebooks.github.io/Linux/post/03-task-and-tools-1.html</guid>
+            <dc:creator><![CDATA[S]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[[TOC]]]></description>
+            <link>http://ds-ebooks.github.io/Linux/post/04-task-and-tools-2.html</link>
+            <guid isPermaLink="true">http://ds-ebooks.github.io/Linux/post/04-task-and-tools-2.html</guid>
+            <dc:creator><![CDATA[S]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[大多数程序通过一个简单的，两个命令的序列构建：]]></description>
+            <link>http://ds-ebooks.github.io/Linux/post/05-compile-program.html</link>
+            <guid isPermaLink="true">http://ds-ebooks.github.io/Linux/post/05-compile-program.html</guid>
+            <dc:creator><![CDATA[S]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>http://ds-ebooks.github.io/Linux/GLOSSARY.html</link>
+            <guid isPermaLink="true">http://ds-ebooks.github.io/Linux/GLOSSARY.html</guid>
+            <dc:creator><![CDATA[S]]></dc:creator>
+        </item>
+    </channel>
+</rss>

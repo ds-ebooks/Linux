@@ -1,0 +1,1496 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>常见任务和基本工具(下篇) · Linux入门笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Linux入门必备">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="S">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="05-compile-program.html" />
+    
+    
+    <link rel="prev" href="03-task-and-tools-1.html" />
+    
+
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    <script src="../gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="../gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    <link href="http://ds-ebooks.github.io/Linux/sitmap.xml" title="Linux入门笔记" rel="alternate" type="application/rss+xml" />
+
+    
+        <link rel="shortcut icon" href='../favicon.png' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../favicon.png' type="image/x-icon">
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"ds-ebooks/Linux","types":["star","watch","fork"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.ds-vip.top" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Linux入门</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="01-learn-shell.html">
+            
+                <a href="01-learn-shell.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    学习Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02-config-and-environments.html">
+            
+                <a href="02-config-and-environments.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Shell环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="03-task-and-tools-1.html">
+            
+                <a href="03-task-and-tools-1.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    常见任务和基本工具(上篇)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4" data-path="04-task-and-tools-2.html">
+            
+                <a href="04-task-and-tools-2.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    常见任务和基本工具(下篇)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="05-compile-program.html">
+            
+                <a href="05-compile-program.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    编译程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >常见任务和基本工具(下篇)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>[TOC]</p>
+<h2 id="&#x4E94;&#x3001;&#x5F52;&#x6863;&#x548C;&#x5907;&#x4EFD;"><a name="&#x4E94;&#x3001;&#x5F52;&#x6863;&#x548C;&#x5907;&#x4EFD;" class="anchor-navigation-ex-anchor" href="#&#x4E94;&#x3001;&#x5F52;&#x6863;&#x548C;&#x5907;&#x4EFD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E94;&#x3001;&#x5F52;&#x6863;&#x548C;&#x5907;&#x4EFD;</h2>
+<pre class="language-"><code class="lang-shell"># &#x538B;&#x7F29;&#x7A0B;&#x5E8F;
+gzip &#x2013; &#x538B;&#x7F29;&#x6216;&#x8005;&#x5C55;&#x5F00;&#x6587;&#x4EF6;
+bzip2 &#x2013; &#x5757;&#x6392;&#x5E8F;&#x6587;&#x4EF6;&#x538B;&#x7F29;&#x5668;
+# &#x5F52;&#x6863;&#x7A0B;&#x5E8F;
+tar &#x2013; &#x78C1;&#x5E26;&#x6253;&#x5305;&#x5DE5;&#x5177;
+zip &#x2013; &#x6253;&#x5305;&#x548C;&#x538B;&#x7F29;&#x6587;&#x4EF6;
+# &#x6587;&#x4EF6;&#x540C;&#x6B65;&#x7A0B;&#x5E8F;
+rsync &#x2013; &#x540C;&#x6B65;&#x8FDC;&#x7AEF;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;
+</code></pre>
+<h3 id="&#x538B;&#x7F29;&#x6587;&#x4EF6;"><a name="&#x538B;&#x7F29;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x538B;&#x7F29;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x538B;&#x7F29;&#x6587;&#x4EF6;</h3>
+<p>&#x538B;&#x7F29;&#x7B97;&#x6CD5;&#xFF1A;&#x65E0;&#x635F;&#x538B;&#x7F29;&#x4FDD;&#x7559;&#x4E86; &#x539F;&#x59CB;&#x6587;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF1B;&#x6709;&#x635F;&#x538B;&#x7F29;&#xFF0C;&#x6267;&#x884C;&#x538B;&#x7F29;&#x64CD;&#x4F5C;&#x65F6;&#x4F1A;&#x5220;&#x9664;&#x6570;&#x636E;&#xFF0C;&#x5141;&#x8BB8;&#x66F4;&#x5927;&#x7684;&#x538B;&#x7F29;&#x3002;<strong>gzip/gunzip&#xFF1A;</strong></p>
+<pre class="language-"><code class="lang-shell">alien@localhost:~ $ ls -l /etc &gt; foo.txt
+alien@localhost:~ $ ls -l foo.*
+-rw-rw-r-- 1 alien alien 14700 9&#x6708;  20 08:36 foo.txt
+alien@localhost:~ $ gzip foo.txt 
+alien@localhost:~ $ ls -l foo.*
+-rw-rw-r-- 1 alien alien 2877 9&#x6708;  20 08:36 foo.txt.gz
+alien@localhost:~ $ gunzip foo.txt.gz 
+alien@localhost:~ $ ls -l foo.*
+-rw-rw-r-- 1 alien alien 14700 9&#x6708;  20 08:36 foo.txt
+</code></pre>
+<p><strong>gzip &#x9009;&#x9879;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x9009;&#x9879;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-c</td>
+<td>&#x628A;&#x8F93;&#x51FA;&#x5199;&#x5165;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#xFF0C;&#x5E76;&#x4E14;&#x4FDD;&#x7559;&#x539F;&#x59CB;&#x6587;&#x4EF6;&#x3002;&#x4E5F;&#x6709;&#x53EF;&#x80FD;&#x7528;--stdout &#x548C;--to-stdout &#x9009;&#x9879;&#x6765;&#x6307;&#x5B9A;&#x3002;</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>&#x89E3;&#x538B;&#x7F29;&#x3002;&#x6B63;&#x5982; gunzip &#x547D;&#x4EE4;&#x4E00;&#x6837;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;--decompress &#x6216;&#x8005;--uncompress &#x9009;&#x9879;&#x6765;&#x6307;&#x5B9A;.</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>&#x5F3A;&#x5236;&#x538B;&#x7F29;&#xFF0C;&#x5373;&#x4F7F;&#x539F;&#x59CB;&#x6587;&#x4EF6;&#x7684;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x4E86;&#xFF0C;&#x4E5F;&#x8981;&#x6267;&#x884C;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;--force &#x9009;&#x9879;&#x6765;&#x6307;&#x5B9A;&#x3002;</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>&#x663E;&#x793A;&#x7528;&#x6CD5;&#x4FE1;&#x606F;&#x3002;&#x4E5F;&#x53EF;&#x7528;--help &#x9009;&#x9879;&#x6765;&#x6307;&#x5B9A;&#x3002;</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>&#x5217;&#x51FA;&#x6BCF;&#x4E2A;&#x88AB;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x7684;&#x538B;&#x7F29;&#x6570;&#x636E;&#x3002;&#x4E5F;&#x53EF;&#x7528;--list &#x9009;&#x9879;&#x3002;</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>&#x82E5;&#x547D;&#x4EE4;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x76EE;&#x5F55;&#xFF0C;&#x5219;&#x9012;&#x5F52;&#x5730;&#x538B;&#x7F29;&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x4E5F;&#x53EF;&#x7528;--recursive &#x9009;&#x9879;&#x6765;&#x6307;&#x5B9A;&#x3002;</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>&#x6D4B;&#x8BD5;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x7684;&#x5B8C;&#x6574;&#x6027;&#x3002;&#x4E5F;&#x53EF;&#x7528;--test &#x9009;&#x9879;&#x6765;&#x6307;&#x5B9A;&#x3002;</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>&#x663E;&#x793A;&#x538B;&#x7F29;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x4E5F;&#x53EF;&#x7528;--verbose &#x9009;&#x9879;&#x6765;&#x6307;&#x5B9A;&#x3002;</td>
+</tr>
+<tr>
+<td>-number</td>
+<td>&#x8BBE;&#x7F6E;&#x538B;&#x7F29;&#x6307;&#x6570;&#x3002;number &#x662F;&#x4E00;&#x4E2A;&#x5728;1&#xFF08;&#x6700;&#x5FEB;&#xFF0C;&#x6700;&#x5C0F;&#x538B;&#x7F29;&#xFF09;&#x5230;9&#xFF08;&#x6700;&#x6162;&#xFF0C;&#x6700;&#x5927;&#x538B;&#x7F29;&#xFF09;&#x4E4B;&#x95F4;&#x7684;&#x6574;&#x6570;&#x3002; &#x6570;&#x503C;1&#x548C;9&#x4E5F;&#x53EF;&#x4EE5;&#x5404;&#x81EA;&#x7528;--fast &#x548C;--best &#x9009;&#x9879;&#x6765;&#x8868;&#x793A;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F;&#x6574;&#x6570;6&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<pre class="language-"><code class="lang-shell">alien@localhost:~ $ ls -l /etc | gzip &gt; foo.txt.gz
+# &#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x6307;&#x5B9A;.gz
+alien@localhost:~ $ gunzip foo.txt
+alien@localhost:~ $ ls -l foo.txt 
+-rw-rw-r-- 1 alien alien 14700 9&#x6708;  20 08:43 foo.txt
+</code></pre>
+<pre class="language-"><code class="lang-shell"># &#x67E5;&#x770B;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x5185;&#x5BB9;
+alien@localhost:~ $ ls -l /etc | gzip &gt; foo.txt.gz
+alien@localhost:~ $ gunzip -c foo.txt | less
+alien@localhost:~ $ ls
+bin  foo.txt.gz  &#x516C;&#x5171;&#x7684;  &#x6A21;&#x677F;  &#x89C6;&#x9891;  &#x56FE;&#x7247;  &#x6587;&#x6863;  &#x4E0B;&#x8F7D;  &#x97F3;&#x4E50;  &#x684C;&#x9762;
+# &#x4E0E;&#x4E0A;&#x9762;&#x6709;&#x540C;&#x7B49;&#x4F5C;&#x7528;
+alien@localhost:~ $ zcat foo.txt.gz | less
+# &#x7B49;&#x540C;&#x4E8E;&#x4E0A;&#x9762;&#x7684;&#x8BED;&#x53E5;
+alien@localhost:~ $ zless foo.txt.gz
+</code></pre>
+<p><strong>bzip2&#xFF1A;</strong></p>
+<p>&#x4E0E; gzip &#x7A0B;&#x5E8F;&#x76F8;&#x4F3C;&#xFF0C;&#x4F46;&#x662F;&#x4F7F;&#x7528;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x538B;&#x7F29;&#x7B97;&#x6CD5;&#xFF0C; &#x820D;&#x5F03;&#x4E86;&#x538B;&#x7F29;&#x901F;&#x5EA6;&#xFF0C;&#x800C;&#x5B9E;&#x73B0;&#x4E86;&#x66F4;&#x9AD8;&#x7684;&#x538B;&#x7F29;&#x7EA7;&#x522B;&#x3002;</p>
+<blockquote>
+<p>&#x5982;&#x679C;&#x4F60;&#x518D;&#x6B21;&#x538B;&#x7F29;&#x5DF2;&#x7ECF;&#x538B;&#x7F29;&#x8FC7;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x4F60; &#x4F1A;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x66F4;&#x5927;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x6240;&#x6709;&#x7684;&#x538B;&#x7F29;&#x6280;&#x672F;&#x90FD;&#x4F1A;&#x6D89;&#x53CA;&#x4E00;&#x4E9B;&#x5F00;&#x9500;&#xFF0C;&#x6587;&#x4EF6;&#x4E2D;&#x4F1A;&#x88AB;&#x6DFB;&#x52A0;&#x63CF;&#x8FF0; &#x6B64;&#x6B21;&#x538B;&#x7F29;&#x8FC7;&#x7A0B;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+</blockquote>
+<h3 id="&#x5F52;&#x6863;&#x6587;&#x4EF6;"><a name="&#x5F52;&#x6863;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x5F52;&#x6863;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F52;&#x6863;&#x6587;&#x4EF6;</h3>
+<p><strong>tar:</strong>&#x6269;&#x5C55;&#x540D;&#x4E3A; .tar &#x6216;&#x8005; .tgz &#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5B83;&#x4EEC;&#x5404;&#x81EA;&#x8868;&#x793A;&#x201C;&#x666E;&#x901A;&#x201D; &#x7684; tar &#x5305;&#x548C;&#x88AB; gzip &#x7A0B;&#x5E8F;&#x538B;&#x7F29;&#x8FC7;&#x7684; tar &#x5305;</p>
+<pre class="language-"><code class="lang-shell">tar mode[options] pathname...
+</code></pre>
+<p> <strong>tar &#x6A21;&#x5F0F;:</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x6A21;&#x5F0F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>c</td>
+<td>&#x4E3A;&#x6587;&#x4EF6;&#x548C;&#xFF0F;&#x6216;&#x76EE;&#x5F55;&#x5217;&#x8868;&#x521B;&#x5EFA;&#x5F52;&#x6863;&#x6587;&#x4EF6;&#x3002;</td>
+</tr>
+<tr>
+<td>x</td>
+<td>&#x62BD;&#x53D6;&#x5F52;&#x6863;&#x6587;&#x4EF6;&#x3002;</td>
+</tr>
+<tr>
+<td>r</td>
+<td>&#x8FFD;&#x52A0;&#x5177;&#x4F53;&#x7684;&#x8DEF;&#x5F84;&#x5230;&#x5F52;&#x6863;&#x6587;&#x4EF6;&#x7684;&#x672B;&#x5C3E;&#x3002;</td>
+</tr>
+<tr>
+<td>t</td>
+<td>&#x5217;&#x51FA;&#x5F52;&#x6863;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<pre class="language-"><code class="lang-shell">alien@localhost:~ $ mkdir -p playground/dir-{00{1..9},0{10..99},100}
+alien@localhost:~ $ touch playground/dir-{00{1..9},0{10..99},100}/file-{A..Z}
+# &#x6A21;&#x5F0F;&#x548C;&#x9009;&#x9879;&#x53EF;&#x4EE5;&#x5199;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x800C;&#x4E14;&#x4E0D; &#x9700;&#x8981;&#x5F00;&#x5934;&#x7684;&#x77ED;&#x6A2A;&#x7EBF;&#x3002;
+alien@localhost:~ $ tar cf playground.tar playground
+alien@localhost:~ $ tar tvf playground.tar
+drwxrwxr-x alien/alien       0 2018-09-20 09:01 playground/
+drwxrwxr-x alien/alien       0 2018-09-20 09:01 playground/dir-051/
+-rw-rw-r-- alien/alien       0 2018-09-20 09:01 playground/dir-051/file-K
+...
+# &#x62BD;&#x53D6;tar&#x5305;&#x5230;foo&#x6587;&#x4EF6;&#x5939;
+alien@localhost:~ $ mkdir foo
+alien@localhost:~ $ cd foo
+# &#x7C7B;&#x4F3C;&#x4E8E;&#x538B;&#x7F29;
+alien@localhost:~/foo $ tar xf ../playground.tar
+alien@localhost:~/foo $ ls
+playground
+</code></pre>
+<p>&#x5728;&#x73B0;&#x4EE3; Linux &#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C; USB&#x786C;&#x76D8;&#x4F1A;&#x88AB;&#x201C;&#x81EA;&#x52A8;&#x5730;&#x201D;&#x6302;&#x8F7D;&#x5230; /media &#x76EE;&#x5F55;&#x4E0B;&#x3002;&#x6211;&#x4EEC;&#x4E5F;&#x5047;&#x5B9A;&#x786C;&#x76D8;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; BigDisk &#x7684;&#x903B;&#x8F91;&#x5377;&#x3002; &#x4E3A;&#x4E86;&#x6253;&#x5305;&#x5BB6;&#x76EE;&#x5F55;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x5236;&#x4F5C; tar &#x5305;</p>
+<pre class="language-"><code class="lang-shell"># &#x6253;&#x5305;&#x6587;&#x4EF6;
+sudo tar cf /media/BigDisk/home.tar /home
+# &#x62BD;&#x53D6;&#x6587;&#x4EF6;
+cd /
+sudo tar xf /media/BigDisk/home.tar
+# &#x62BD;&#x53D6;&#x5355;&#x4E2A;&#x6587;&#x4EF6;
+sudo tar xf archive.tar pathname
+</code></pre>
+<p>tar &#x547D;&#x4EE4;&#x7ECF;&#x5E38;&#x7ED3;&#x5408; find &#x547D;&#x4EE4;&#x4E00;&#x8D77;&#x6765;&#x5236;&#x4F5C;&#x5F52;&#x6863;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">alien@localhost:~ $ mkdir -p playground/dir-{00{1..9},0{10..99},100}
+alien@localhost:~ $ touch playground/dir-{00{1..9},0{10..99},100}/file-{A..Z}
+alien@localhost:~ $ find playground -name &apos;file-A&apos; -exec tar rf playground.tar &apos;{}&apos; &apos;+&apos;
+alien@localhost:~ $ ls
+bin         playground.tar  &#x6A21;&#x677F;  &#x56FE;&#x7247;  &#x4E0B;&#x8F7D;  &#x684C;&#x9762;
+playground  &#x516C;&#x5171;&#x7684;          &#x89C6;&#x9891;  &#x6587;&#x6863;  &#x97F3;&#x4E50;
+</code></pre>
+<p>find &#x547D;&#x4EE4;&#x6765;&#x5339;&#x914D; playground &#x76EE;&#x5F55;&#x4E2D;&#x6240;&#x6709;&#x540D;&#x4E3A; file-A &#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;-exec &#x884C;&#x4E3A;&#xFF0C;&#x6765; &#x5524;&#x9192;&#x5E26;&#x6709;&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#xFF08;r&#xFF09;&#x7684; tar &#x547D;&#x4EE4;&#xFF0C;&#x628A;&#x5339;&#x914D;&#x7684;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x5F52;&#x6863;&#x6587;&#x4EF6; playground.tar &#x91CC;&#x9762;&#x3002;</p>
+<pre class="language-"><code class="lang-shell">alien@localhost:~ $ find playground -name &apos;file-A&apos; | tar cf - --files-from=- | gzip &gt; playground.tgz
+alien@localhost:~ $ ls
+bin  playground  playground.tar  playground.tgz  &#x516C;&#x5171;&#x7684;  &#x6A21;&#x677F;  &#x89C6;&#x9891;  &#x56FE;&#x7247;  &#x6587;&#x6863;  &#x4E0B;&#x8F7D;  &#x97F3;&#x4E50;  &#x684C;&#x9762;
+</code></pre>
+<p> --file-from &#x9009;&#x9879;&#xFF08;&#x4E5F;&#x53EF;&#x4EE5;&#x7528; -T &#x6765;&#x6307;&#x5B9A;&#xFF09; &#x5BFC;&#x81F4; tar &#x547D;&#x4EE4;&#x4ECE;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x800C;&#x4E0D;&#x662F;&#x547D;&#x4EE4;&#x884C;&#x6765;&#x8BFB;&#x5165;&#x5B83;&#x7684;&#x8DEF;&#x5F84;&#x540D;&#x5217;&#x8868;&#x3002;&#x73B0;&#x5728;&#x7684; GUN &#x7248;&#x672C;&#x7684; tar &#x547D;&#x4EE4; &#xFF0C;gzip &#x548C; bzip2 &#x538B;&#x7F29;&#x4E24;&#x8005;&#x90FD;&#x76F4;&#x63A5;&#x652F;&#x6301;&#xFF0C;&#x5404;&#x81EA;&#x4F7F;&#x7528; z &#x548C; j &#x9009;&#x9879;&#xFF0C;&#x4E0A;&#x8FF0;&#x547D;&#x4EE4;&#x7B80;&#x5316;&#x4E3A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">find playground -name &apos;file-A&apos; | tar czf playground.tgz -T -
+# &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7531; bzip2 &#x538B;&#x7F29;&#x7684;&#x5F52;&#x6863;&#x6587;&#x4EF6;
+find playground -name &apos;file-A&apos; | tar cjf playground.tbz -T -
+</code></pre>
+<pre class="language-"><code class="lang-shell">&#x628A;&#x8FDC;&#x7AEF;remote-sys&#x4E3B;&#x673A;&#x4E0B;&#x7684;`Documents`&#x6587;&#x4EF6;&#x5939;&#x6253;&#x5305;&#x5230;&#x672C;&#x5730;&#x7CFB;&#x7EDF;
+ssh remote-sys &apos;tar cf - Documents&apos; | tar xf -
+</code></pre>
+<p><strong>zip&#xFF1A;</strong></p>
+<pre class="language-"><code class="lang-shell">zip options zipfile file...
+</code></pre>
+<pre class="language-"><code class="lang-shell">alien@localhost:~ $ zip -r playground.zip playground
+  adding: playground/ (stored 0%)
+  adding: playground/dir-051/ (stored 0%)
+  adding: playground/dir-051/file-K (stored 0%)
+...
+alien@localhost:~ $ ls
+bin         playground.tar  playground.zip  &#x6A21;&#x677F;  &#x56FE;&#x7247;  &#x4E0B;&#x8F7D;  &#x684C;&#x9762;
+playground  playground.tgz  &#x516C;&#x5171;&#x7684;          &#x89C6;&#x9891;  &#x6587;&#x6863;  &#x97F3;&#x4E50;
+</code></pre>
+<p>&#x4F7F;&#x7528;-l &#x9009;&#x9879;&#xFF0C;&#x5BFC;&#x81F4; unzip &#x547D;&#x4EE4;&#x53EA;&#x662F;&#x5217;&#x51FA;&#x6587;&#x4EF6;&#x5305;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x800C;&#x6CA1;&#x6709;&#x62BD;&#x53D6;&#x6587;&#x4EF6;&#x3002;&#x6DFB;&#x52A0;&#x8FD9;&#x4E2A;-v &#x9009;&#x9879;&#x4F1A;&#x589E;&#x52A0;&#x5217;&#x8868;&#x7684;&#x5197;&#x4F59;&#x4FE1;&#x606F;&#x3002;</p>
+<pre class="language-"><code class="lang-shell"># &#x5229;&#x7528;&#x7BA1;&#x9053;
+alien@localhost:~ $ find playground -name &quot;file-A&quot; | zip -@ file-A.zip
+  adding: playground/dir-051/file-A (stored 0%)
+  adding: playground/dir-007/file-A (stored 0%)
+  adding: playground/dir-092/file-A (stored 0%)
+</code></pre>
+<p> <code>unzip</code> &#x7A0B;&#x5E8F;&#xFF0C;&#x4E0D;&#x63A5;&#x53D7;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x3002;</p>
+<pre class="language-"><code class="lang-shell"># &#x4E0E;tar&#x4E00;&#x6837;&#xFF0C;zip &#x547D;&#x4EE4;&#x628A;&#x672B;&#x5C3E;&#x7684;&#x6A2A;&#x6760;&#x89E3;&#x91CA;&#x4E3A; &#x201C;&#x4F7F;&#x7528;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x3002;&#x201D;
+alien@localhost:~ $ ls -l /etc/ | zip ls-etc.zip -
+  adding: - (deflated 81%)
+</code></pre>
+<h3 id="&#x540C;&#x6B65;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;"><a name="&#x540C;&#x6B65;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x540C;&#x6B65;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x540C;&#x6B65;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;</h3>
+<p>&#x901A;&#x8FC7;&#x4F7F;&#x7528; rsync &#x8FDC;&#x7AEF;&#x66F4;&#x65B0;&#x534F;&#x8BAE;&#xFF0C;&#x6B64;&#x534F;&#x8BAE; &#x5141;&#x8BB8; rsync &#x5FEB;&#x901F;&#x5730;&#x68C0;&#x6D4B;&#x4E24;&#x4E2A;&#x76EE;&#x5F55;&#x7684;&#x5DEE;&#x5F02;&#xFF0C;&#x6267;&#x884C;&#x6700;&#x5C0F;&#x91CF;&#x7684;&#x590D;&#x5236;&#x6765;&#x8FBE;&#x5230;&#x76EE;&#x5F55;&#x95F4;&#x7684;&#x540C;&#x6B65;&#x3002;</p>
+<pre class="language-"><code class="lang-shell">rsync options source destination
+</code></pre>
+<p>source &#x548C; destination &#x4E24;&#x8005;&#x4E4B;&#x4E00;&#x5FC5;&#x987B;&#x662F;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x3002;rsync &#x4E0D;&#x652F;&#x6301;&#x8FDC;&#x7AEF;&#x5230;&#x8FDC;&#x7AEF;&#x7684;&#x590D;&#x5236;&#x3002;source &#x548C; destination &#x662F;&#x4E0B;&#x5217;&#x9009;&#x9879;&#x4E4B;&#x4E00;&#xFF1A;</p>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;</li>
+<li>&#x4E00;&#x4E2A;&#x8FDC;&#x7AEF;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#xFF0C;&#x4EE5;[user@]host:path &#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x5728;</li>
+<li>&#x4E00;&#x4E2A;&#x8FDC;&#x7AEF; rsync &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7531; rsync://[user@]host[:port]/path &#x6307;&#x5B9A;</li>
+</ul>
+<pre class="language-"><code class="lang-shell"># -a &#x9009;&#x9879;&#xFF08;&#x9012;&#x5F52;&#x548C;&#x4FDD;&#x62A4;&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#xFF09;&#x548C;-v &#x9009;&#x9879;&#xFF08;&#x5197;&#x4F59;&#x8F93;&#x51FA;&#xFF09;
+rsync -av playground foo
+</code></pre>
+<h3 id="&#x5728;&#x7F51;&#x7EDC;&#x95F4;&#x4F7F;&#x7528;-rsync-&#x547D;&#x4EE4;"><a name="&#x5728;&#x7F51;&#x7EDC;&#x95F4;&#x4F7F;&#x7528;-rsync-&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x5728;&#x7F51;&#x7EDC;&#x95F4;&#x4F7F;&#x7528;-rsync-&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5728;&#x7F51;&#x7EDC;&#x95F4;&#x4F7F;&#x7528; rsync &#x547D;&#x4EE4;</h3>
+<pre class="language-"><code class="lang-shell"># &#x5907;&#x4EFD;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x5230;&#x8FDC;&#x7AEF;
+sudo rsync -av --delete --rsh=ssh /etc /home /usr/local remote-sys:/backup
+# &#x540C;&#x6B65;&#x8FDC;&#x7AEF;&#x6587;&#x4EF6;&#x5230;&#x672C;&#x5730;
+rsync -av -delete rsync://rsync.gtlib.gatech.edu/fedora-linux-core/development/i386/os fedora-devel
+</code></pre>
+<h2 id="&#x516D;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"><a name="&#x516D;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x516D;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516D;&#x3001;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</h2>
+<ul>
+<li>&#x89C1;&#x7B14;&#x8BB0;&#xFF1A;<a href="https://blog.csdn.net/ds19991999/article/category/7887554" target="_blank">https://blog.csdn.net/ds19991999/article/category/7887554</a></li>
+</ul>
+<h3 id="grep"><a name="grep" class="anchor-navigation-ex-anchor" href="#grep"><i class="fa fa-link" aria-hidden="true"></i></a>grep</h3>
+<p><code>grep [options] regex [file...]</code>&#xFF0C;grep &#x7A0B;&#x5E8F;&#x4F1A;&#x5728;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x4E2D;&#x67E5;&#x627E;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5E76;&#x628A;&#x5339;&#x914D;&#x884C;&#x8F93;&#x51FA;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x3002;</p>
+<p>grep&#x9009;&#x9879;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x9009;&#x9879;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-i</td>
+<td>&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;&#x3002;&#x4E0D;&#x4F1A;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#x5B57;&#x7B26;&#x3002;&#x4E5F;&#x53EF;&#x7528;--ignore-case &#x6765;&#x6307;&#x5B9A;&#x3002;</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>&#x4E0D;&#x5339;&#x914D;&#x3002;&#x901A;&#x5E38;&#xFF0C;grep &#x7A0B;&#x5E8F;&#x4F1A;&#x6253;&#x5370;&#x5305;&#x542B;&#x5339;&#x914D;&#x9879;&#x7684;&#x6587;&#x672C;&#x884C;&#x3002;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x5BFC;&#x81F4; grep &#x7A0B;&#x5E8F;&#x53EA;&#x4F1A;&#x6253;&#x5370;&#x4E0D;&#x5305;&#x542B;&#x5339;&#x914D;&#x9879;&#x7684;&#x6587;&#x672C;&#x884C;&#x3002;&#x4E5F;&#x53EF;&#x7528;--invert-match &#x6765;&#x6307;&#x5B9A;&#x3002;</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>&#x6253;&#x5370;&#x5339;&#x914D;&#x7684;&#x6570;&#x91CF;&#xFF08;&#x6216;&#x8005;&#x662F;&#x4E0D;&#x5339;&#x914D;&#x7684;&#x6570;&#x76EE;&#xFF0C;&#x82E5;&#x6307;&#x5B9A;&#x4E86;-v &#x9009;&#x9879;&#xFF09;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6587;&#x672C;&#x884C;&#x672C;&#x8EAB;&#x3002; &#x4E5F;&#x53EF;&#x7528;--count &#x9009;&#x9879;&#x6765;&#x6307;&#x5B9A;&#x3002;</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>&#x6253;&#x5370;&#x5305;&#x542B;&#x5339;&#x914D;&#x9879;&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6587;&#x672C;&#x884C;&#x672C;&#x8EAB;&#xFF0C;&#x4E5F;&#x53EF;&#x7528;--files-with-matches &#x9009;&#x9879;&#x6765;&#x6307;&#x5B9A;&#x3002;</td>
+</tr>
+<tr>
+<td>-L</td>
+<td>&#x76F8;&#x4F3C;&#x4E8E;-l &#x9009;&#x9879;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x662F;&#x6253;&#x5370;&#x4E0D;&#x5305;&#x542B;&#x5339;&#x914D;&#x9879;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x3002;&#x4E5F;&#x53EF;&#x7528;--files-without-match &#x6765;&#x6307;&#x5B9A;&#x3002;</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>&#x5728;&#x6BCF;&#x4E2A;&#x5339;&#x914D;&#x884C;&#x4E4B;&#x524D;&#x6253;&#x5370;&#x51FA;&#x5176;&#x4F4D;&#x4E8E;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x76F8;&#x5E94;&#x884C;&#x53F7;&#x3002;&#x4E5F;&#x53EF;&#x7528;--line-number &#x9009;&#x9879;&#x6765;&#x6307;&#x5B9A;&#x3002;</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>&#x5E94;&#x7528;&#x4E8E;&#x591A;&#x6587;&#x4EF6;&#x641C;&#x7D22;&#xFF0C;&#x4E0D;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x540D;&#x3002;&#x4E5F;&#x53EF;&#x7528;--no-filename &#x9009;&#x9879;&#x6765;&#x6307;&#x5B9A;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<pre class="language-"><code class="lang-shell">alien@localhost:~ $ ls /bin &gt; dirlist-bin.txt
+alien@localhost:~ $ ls /usr/bin &gt; dirlist-usr-bin.txt
+alien@localhost:~ $ ls /sbin &gt; dirlist-sbin.txt
+alien@localhost:~ $ ls /usr/sbin &gt; dirlist-usr-sbin.txt
+alien@localhost:~ $ ls dirlist*.txt
+dirlist-bin.txt  dirlist-sbin.txt  dirlist-usr-bin.txt  dirlist-usr-sbin.txt
+# &#x641C;&#x7D22;&#x6240;&#x5217;&#x6587;&#x4EF6;&#x4E2D;&#x7684;
+alien@localhost:~ $ grep bzip dirlist*.txt
+dirlist-bin.txt:bzip2
+dirlist-bin.txt:bzip2recover
+alien@localhost:~ $ grep -l bzip dirlist*.txt
+dirlist-bin.txt
+# &#x67E5;&#x770B;&#x4E0D;&#x5305;&#x542B;&#x5339;&#x914D;&#x9879;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x8868;
+alien@localhost:~ $ grep -L bzip dirlist*.txt
+dirlist-sbin.txt
+dirlist-usr-bin.txt
+dirlist-usr-sbin.txt
+</code></pre>
+<p>&#x5143;&#x5B57;&#x7B26;&#xFF1A;<code>^ $ . [ ] { } - ? * + ( ) | \</code>&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x5143;&#x5B57;&#x7B26;&#x7528;&#x5F15;&#x53F7;&#x5F15;&#x8D77;&#x6765;&#x963B;&#x6B62; shell &#x8BD5;&#x56FE;&#x5C55;&#x5F00;&#x5B83;&#x4EEC;</p>
+<p><img src="https://raw.githubusercontent.com/ds19991999/githubimg/master/picgo/20180920111007.png" alt=""></p>
+<p>&#x63D2;&#x5165;&#x7B26;&#x53F7;&#x548C;&#x7F8E;&#x5143;&#x7B26;&#x53F7;&#x88AB;&#x770B;&#x4F5C;&#x662F;&#x951A;&#x70B9;&#xFF0C;<code>^</code>&#x5339;&#x914D;&#x5F00;&#x5934;&#xFF0C;<code>$</code>&#x5339;&#x914D;&#x5C3E;&#x90E8;&#x3002;</p>
+<pre class="language-"><code class="lang-shell"># &#x5728;&#x6211;&#x4EEC;&#x7684;&#x5B57;&#x5178;&#x6587;&#x4EF6;&#x4E2D;&#x67E5;&#x627E;&#x5230;&#x5305;&#x542B;&#x4E94;&#x4E2A;&#x5B57;&#x6BCD;&#xFF0C;&#x4E14;&#x7B2C;&#x4E09;&#x4E2A;&#x5B57;&#x6BCD; &#x662F;&#x201C;j&#x201D;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B57;&#x6BCD;&#x662F;&#x201C;r&#x201D;&#x7684;&#x6240;&#x6709;&#x5355;&#x8BCD;
+alien@localhost:~ $ grep -i &apos;^..j.r$&apos; /usr/share/dict/words
+Major
+major
+</code></pre>
+<h3 id="posix-&#x5B57;&#x7B26;&#x96C6;"><a name="posix-&#x5B57;&#x7B26;&#x96C6;" class="anchor-navigation-ex-anchor" href="#posix-&#x5B57;&#x7B26;&#x96C6;"><i class="fa fa-link" aria-hidden="true"></i></a>POSIX &#x5B57;&#x7B26;&#x96C6;</h3>
+<p>posix&#x6807;&#x51C6;&#x5F15;&#x5165;&#x4E86;&#x201D;locale&#x201D;&#x6982;&#x5FF5;&#xFF0C;&#x5B83;&#x80FD;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x5730;&#x533A;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x3002;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x7B26;&#x96C6;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[:alnum:]</td>
+<td>&#x5B57;&#x6BCD;&#x6570;&#x5B57;&#x5B57;&#x7B26;&#x3002;&#x5728; ASCII &#x4E2D;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#xFF1A;[A-Za-z0-9]</td>
+</tr>
+<tr>
+<td>[:word:]</td>
+<td>&#x4E0E;[:alnum:]&#x76F8;&#x540C;, &#x4F46;&#x589E;&#x52A0;&#x4E86;&#x4E0B;&#x5212;&#x7EBF;&#x5B57;&#x7B26;&#x3002;</td>
+</tr>
+<tr>
+<td>[:alpha:]</td>
+<td>&#x5B57;&#x6BCD;&#x5B57;&#x7B26;&#x3002;&#x5728; ASCII &#x4E2D;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#xFF1A;[A-Za-z]</td>
+</tr>
+<tr>
+<td>[:blank:]</td>
+<td>&#x5305;&#x542B;&#x7A7A;&#x683C;&#x548C; tab &#x5B57;&#x7B26;&#x3002;</td>
+</tr>
+<tr>
+<td>[:cntrl:]</td>
+<td>ASCII &#x7684;&#x63A7;&#x5236;&#x7801;&#x3002;&#x5305;&#x542B;&#x4E86;0&#x5230;31&#xFF0C;&#x548C;127&#x7684; ASCII &#x5B57;&#x7B26;&#x3002;</td>
+</tr>
+<tr>
+<td>[:digit:]</td>
+<td>&#x6570;&#x5B57;0&#x5230;9</td>
+</tr>
+<tr>
+<td>[:graph:]</td>
+<td>&#x53EF;&#x89C6;&#x5B57;&#x7B26;&#x3002;&#x5728; ASCII &#x4E2D;&#xFF0C;&#x5B83;&#x5305;&#x542B;33&#x5230;126&#x7684;&#x5B57;&#x7B26;&#x3002;</td>
+</tr>
+<tr>
+<td>[:lower:]</td>
+<td>&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x3002;</td>
+</tr>
+<tr>
+<td>[:punct:]</td>
+<td>&#x6807;&#x70B9;&#x7B26;&#x53F7;&#x5B57;&#x7B26;&#x3002;&#x5728; ASCII &#x4E2D;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#xFF1A;[-!&quot;#$%&amp;&apos;()*+,./:;&lt;=&gt;?@[\]_`{\</td>
+<td>}~]</td>
+</tr>
+<tr>
+<td>[:print:]</td>
+<td>&#x53EF;&#x6253;&#x5370;&#x7684;&#x5B57;&#x7B26;&#x3002;&#x5728;[:graph:]&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;&#xFF0C;&#x518D;&#x52A0;&#x4E0A;&#x7A7A;&#x683C;&#x5B57;&#x7B26;&#x3002;</td>
+</tr>
+<tr>
+<td>[:space:]</td>
+<td>&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#xFF0C;&#x5305;&#x62EC;&#x7A7A;&#x683C;&#x3001;tab&#x3001;&#x56DE;&#x8F66;&#x3001;&#x6362;&#x884C;&#x3001;vertical tab &#x548C; form feed.&#x5728; ASCII &#x4E2D;&#xFF0C; &#x7B49;&#x4EF7;&#x4E8E;&#xFF1A;[ \t\r\n\v\f]</td>
+</tr>
+<tr>
+<td>[:upper:]</td>
+<td>&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x3002;</td>
+</tr>
+<tr>
+<td>[:xdigit:]</td>
+<td>&#x7528;&#x6765;&#x8868;&#x793A;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#x7684;&#x5B57;&#x7B26;&#x3002;&#x5728; ASCII &#x4E2D;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#xFF1A;[0-9A-Fa-f]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x4E03;&#x3001;&#x6587;&#x672C;&#x5904;&#x7406;"><a name="&#x4E03;&#x3001;&#x6587;&#x672C;&#x5904;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x4E03;&#x3001;&#x6587;&#x672C;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E03;&#x3001;&#x6587;&#x672C;&#x5904;&#x7406;</h2>
+<pre class="language-"><code class="lang-shell">cat &#x2013; &#x8FDE;&#x63A5;&#x6587;&#x4EF6;&#x5E76;&#x4E14;&#x6253;&#x5370;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;
+sort &#x2013; &#x7ED9;&#x6587;&#x672C;&#x884C;&#x6392;&#x5E8F;
+uniq &#x2013; &#x62A5;&#x544A;&#x6216;&#x8005;&#x7701;&#x7565;&#x91CD;&#x590D;&#x884C;
+cut &#x2013; &#x4ECE;&#x6BCF;&#x884C;&#x4E2D;&#x5220;&#x9664;&#x6587;&#x672C;&#x533A;&#x57DF;
+paste &#x2013; &#x5408;&#x5E76;&#x6587;&#x4EF6;&#x6587;&#x672C;&#x884C;
+join &#x2013; &#x57FA;&#x4E8E;&#x67D0;&#x4E2A;&#x5171;&#x4EAB;&#x5B57;&#x6BB5;&#x6765;&#x8054;&#x5408;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x672C;&#x884C;
+comm &#x2013; &#x9010;&#x884C;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x7684;&#x6587;&#x4EF6;
+diff &#x2013; &#x9010;&#x884C;&#x6BD4;&#x8F83;&#x6587;&#x4EF6;
+patch &#x2013; &#x7ED9;&#x539F;&#x59CB;&#x6587;&#x4EF6;&#x6253;&#x8865;&#x4E01;
+tr &#x2013; &#x7FFB;&#x8BD1;&#x6216;&#x5220;&#x9664;&#x5B57;&#x7B26;
+sed &#x2013; &#x7528;&#x4E8E;&#x7B5B;&#x9009;&#x548C;&#x8F6C;&#x6362;&#x6587;&#x672C;&#x7684;&#x6D41;&#x7F16;&#x8F91;&#x5668;
+aspell &#x2013; &#x4EA4;&#x4E92;&#x5F0F;&#x62FC;&#x5199;&#x68C0;&#x67E5;&#x5668;
+</code></pre>
+<h3 id="&#x6587;&#x672C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;"><a name="&#x6587;&#x672C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x672C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x672C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;</h3>
+<pre class="language-"><code class="lang-shell">cat &gt; foo.txt    # &#x5C06;&#x8F93;&#x5165;cat&#x91CD;&#x5B9A;&#x5411;&#x5230;foo.txt&#x4E2D;&#xFF0C;&#x6309;CTRL+D&#x7ED3;&#x675F;
+cat -ns foo.txt  # &#x8F93;&#x51FA;&#x663E;&#x793A;&#x884C;&#x53F7;&#x548C;&#x7981;&#x6B62;&#x8F93;&#x51FA;&#x591A;&#x4E2A;&#x7A7A;&#x767D;&#x884C;
+sort &gt; foo.txt # &#x5C06;&#x8F93;&#x5165;sort&#x91CD;&#x5B9A;&#x5411;&#x5230;foo.txt&#x4E2D;&#xFF0C;&#x6309;CTRL+D&#x7ED3;&#x675F;
+# &#x5C06;&#x4E09;&#x4E2A;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x7684;&#x6587;&#x4EF6;
+sort file1.txt file2.txt file3.txt &gt; final_sorted_list.txt
+</code></pre>
+<p><strong>&#x5E38;&#x89C1;&#x7684; sort &#x7A0B;&#x5E8F;&#x9009;&#x9879;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x9009;&#x9879;</th>
+<th>&#x957F;&#x9009;&#x9879;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-b</td>
+<td>--ignore-leading-blanks</td>
+<td>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5BF9;&#x6574;&#x884C;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x4ECE;&#x6BCF;&#x884C;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5F00;&#x59CB;&#x3002;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x5BFC;&#x81F4; sort &#x7A0B;&#x5E8F;&#x5FFD;&#x7565; &#x6BCF;&#x884C;&#x5F00;&#x5934;&#x7684;&#x7A7A;&#x683C;&#xFF0C;&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x975E;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#x5F00;&#x59CB;&#x6392;&#x5E8F;&#x3002;</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>--ignore-case</td>
+<td>&#x8BA9;&#x6392;&#x5E8F;&#x4E0D;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#x3002;</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>--numeric-sort</td>
+<td>&#x57FA;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6570;&#x503C;&#x6765;&#x6392;&#x5E8F;&#x3002;&#x4F7F;&#x7528;&#x6B64;&#x9009;&#x9879;&#x5141;&#x8BB8;&#x6839;&#x636E;&#x6570;&#x5B57;&#x503C;&#x6267;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5B57;&#x6BCD;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>--reverse</td>
+<td>&#x6309;&#x76F8;&#x53CD;&#x987A;&#x5E8F;&#x6392;&#x5E8F;&#x3002;&#x7ED3;&#x679C;&#x6309;&#x7167;&#x964D;&#x5E8F;&#x6392;&#x5217;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5347;&#x5E8F;&#x3002;</td>
+</tr>
+<tr>
+<td>-k</td>
+<td>--key=field1[,field2]</td>
+<td>&#x5BF9;&#x4ECE; field1&#x5230; field2&#x4E4B;&#x95F4;&#x7684;&#x5B57;&#x7B26;&#x6392;&#x5E8F;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6574;&#x4E2A;&#x6587;&#x672C;&#x884C;&#x3002;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x8BA8;&#x8BBA;&#x3002;</td>
+</tr>
+<tr>
+<td>-m</td>
+<td>--merge</td>
+<td>&#x628A;&#x6BCF;&#x4E2A;&#x53C2;&#x6570;&#x770B;&#x4F5C;&#x662F;&#x4E00;&#x4E2A;&#x9884;&#x5148;&#x6392;&#x597D;&#x5E8F;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x628A;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#x6392;&#x597D;&#x5E8F;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x6CA1;&#x6709;&#x6267;&#x884C;&#x989D;&#x5916;&#x7684;&#x6392;&#x5E8F;&#x3002;</td>
+</tr>
+<tr>
+<td>-o</td>
+<td>--output=file</td>
+<td>&#x628A;&#x6392;&#x597D;&#x5E8F;&#x7684;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x53D1;&#x9001;&#x5230;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x3002;</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>--field-separator=char</td>
+<td>&#x5B9A;&#x4E49;&#x57DF;&#x5206;&#x9694;&#x5B57;&#x7B26;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x57DF;&#x7531;&#x7A7A;&#x683C;&#x6216;&#x5236;&#x8868;&#x7B26;&#x5206;&#x9694;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<pre class="language-"><code class="lang-shell"># du &#x547D;&#x4EE4;&#x53EF;&#x4EE5; &#x786E;&#x5B9A;&#x6700;&#x5927;&#x7684;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x7528;&#x6237;&#xFF0C;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x6309;&#x7167;&#x8DEF;&#x5F84;&#x540D;&#x6765;&#x6392;&#x5E8F;
+# head &#x547D;&#x4EE4;&#xFF0C;&#x628A;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x9650;&#x5236;&#x4E3A;&#x524D; 10 &#x884C;
+du -s /usr/share/* | head
+# &#x6309;&#x6570;&#x503C;&#x6392;&#x5E8F;
+du -s /usr/share/* | sort -nr | head
+# &#x6309;&#x7167;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#x6392;&#x5E8F;&#xFF0C;5&#x6307;&#x7B2C;&#x4E94;&#x4E2A;&#x5B57;&#x6BB5;
+ls -l /usr/bin | sort -nr -k 5 | head
+# &#x5BF9;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#x6392;&#x5E8F;&#xFF0C;&#x6307;&#x5B9A;&#x4E86; 1,1&#xFF0C; &#x59CB;&#x4E8E;&#x5E76;&#x4E14;&#x7ED3;&#x675F;&#x4E8E;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;
+# &#x7B2C;&#x4E8C;&#x4E2A;&#x5B9E;&#x4F8B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x6307;&#x5B9A;&#x4E86; 2n&#xFF0C;&#x610F;&#x5473;&#x7740;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B57;&#x6BB5;&#x662F;&#x6392;&#x5E8F;&#x7684;&#x952E;&#x503C;
+sort --key=1,1 --key=2n distros.txt
+# sort &#x7A0B;&#x5E8F;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x6392;&#x5E8F;&#x952E;&#x503C;&#xFF0C;&#x5176;&#x59CB;&#x4E8E;&#x7B2C;&#x4E09;&#x4E2A;&#x5B57;&#x6BB5;&#x4E2D;&#x7684;&#x7B2C;&#x4E03;&#x4E2A;&#x5B57;&#x7B26;
+#  n &#x548C; r &#x9009;&#x9879;&#x6765;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x9006;&#x5411;&#x7684;&#x6570;&#x503C;&#x6392;&#x5E8F;&#xFF0C;b &#x9009;&#x9879;&#x7528;&#x6765;&#x5220;&#x9664;&#x65E5;&#x671F;&#x5B57;&#x6BB5;&#x4E2D;&#x5F00;&#x5934;&#x7684;&#x7A7A;&#x683C;
+sort -k 3.7nbr -k 3.1nbr -k 3.4nbr distros.txt
+#  -t &#x9009;&#x9879;&#x6765;&#x5B9A;&#x4E49;&#x5206;&#x9694;&#x7B26;
+sort -t &apos;:&apos; -k 7 /etc/passwd | head
+</code></pre>
+<p>uniq &#x4F1A;&#x5220;&#x9664;&#x4EFB;&#x610F;&#x6392;&#x597D;&#x5E8F;&#x7684;&#x91CD;&#x590D;&#x884C;&#xFF08;&#x56E0;&#x4E3A; uniq &#x53EA;&#x4F1A;&#x5220;&#x9664;&#x76F8;&#x90BB;&#x7684;&#x91CD;&#x590D;&#x884C;&#xFF09;&#xFF0C;&#x5E76;&#x4E14;&#x628A;&#x7ED3;&#x679C;&#x53D1;&#x9001;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x3002; &#x5B83;&#x5E38;&#x5E38;&#x548C; sort &#x7A0B;&#x5E8F;&#x4E00;&#x5757;&#x4F7F;&#x7528;&#xFF0C;&#x6765;&#x6E05;&#x7406;&#x91CD;&#x590D;&#x7684;&#x8F93;&#x51FA;&#x3002;
+<strong>uniq &#x9009;&#x9879;&#xFF1A;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x9009;&#x9879;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-c</td>
+<td>&#x8F93;&#x51FA;&#x6240;&#x6709;&#x7684;&#x91CD;&#x590D;&#x884C;&#xFF0C;&#x5E76;&#x4E14;&#x6BCF;&#x884C;&#x5F00;&#x5934;&#x663E;&#x793A;&#x91CD;&#x590D;&#x7684;&#x6B21;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>&#x53EA;&#x8F93;&#x51FA;&#x91CD;&#x590D;&#x884C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x7279;&#x6709;&#x7684;&#x6587;&#x672C;&#x884C;&#x3002;</td>
+</tr>
+<tr>
+<td>-f n</td>
+<td>&#x5FFD;&#x7565;&#x6BCF;&#x884C;&#x5F00;&#x5934;&#x7684; n &#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x5B57;&#x6BB5;&#x4E4B;&#x95F4;&#x7531;&#x7A7A;&#x683C;&#x5206;&#x9694;&#xFF0C;&#x6B63;&#x5982; sort &#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x7A7A;&#x683C;&#x5206;&#x9694;&#x7B26;&#xFF1B;&#x7136;&#x800C;&#xFF0C; &#x4E0D;&#x540C;&#x4E8E; sort &#x7A0B;&#x5E8F;&#xFF0C;uniq &#x6CA1;&#x6709;&#x9009;&#x9879;&#x6765;&#x8BBE;&#x7F6E;&#x5907;&#x7528;&#x7684;&#x5B57;&#x6BB5;&#x5206;&#x9694;&#x7B26;&#x3002;</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>&#x5728;&#x6BD4;&#x8F83;&#x6587;&#x672C;&#x884C;&#x7684;&#x65F6;&#x5019;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;&#x3002;</td>
+</tr>
+<tr>
+<td>-s n</td>
+<td>&#x8DF3;&#x8FC7;&#xFF08;&#x5FFD;&#x7565;&#xFF09;&#x6BCF;&#x884C;&#x5F00;&#x5934;&#x7684; n &#x4E2A;&#x5B57;&#x7B26;&#x3002;</td>
+</tr>
+<tr>
+<td>-u</td>
+<td>&#x53EA;&#x8F93;&#x51FA;&#x72EC;&#x6709;&#x7684;&#x6587;&#x672C;&#x884C;&#x3002;&#x8FD9;&#x662F;&#x9ED8;&#x8BA4;&#x7684;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>cut &#x7A0B;&#x5E8F;&#x9009;&#x62E9;&#x9879;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x9009;&#x9879;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-c char_list</td>
+<td>&#x4ECE;&#x6587;&#x672C;&#x884C;&#x4E2D;&#x62BD;&#x53D6;&#x7531; char_list &#x5B9A;&#x4E49;&#x7684;&#x6587;&#x672C;&#x3002;&#x8FD9;&#x4E2A;&#x5217;&#x8868;&#x53EF;&#x80FD;&#x7531;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x9017;&#x53F7; &#x5206;&#x9694;&#x5F00;&#x7684;&#x6570;&#x503C;&#x533A;&#x95F4;&#x7EC4;&#x6210;&#x3002;</td>
+</tr>
+<tr>
+<td>-f field_list</td>
+<td>&#x4ECE;&#x6587;&#x672C;&#x884C;&#x4E2D;&#x62BD;&#x53D6;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x7531; field_list &#x5B9A;&#x4E49;&#x7684;&#x5B57;&#x6BB5;&#x3002;&#x8FD9;&#x4E2A;&#x5217;&#x8868;&#x53EF;&#x80FD; &#x5305;&#x62EC;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x6216;&#x7531;&#x9017;&#x53F7;&#x5206;&#x9694;&#x5F00;&#x7684;&#x5B57;&#x6BB5;&#x533A;&#x95F4;&#x3002;</td>
+</tr>
+<tr>
+<td>-d delim_char</td>
+<td>&#x5F53;&#x6307;&#x5B9A;-f &#x9009;&#x9879;&#x4E4B;&#x540E;&#xFF0C;&#x4F7F;&#x7528; delim_char &#x505A;&#x4E3A;&#x5B57;&#x6BB5;&#x5206;&#x9694;&#x7B26;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C; &#x5B57;&#x6BB5;&#x4E4B;&#x95F4;&#x5FC5;&#x987B;&#x7531;&#x5355;&#x4E2A; tab &#x5B57;&#x7B26;&#x5206;&#x9694;&#x5F00;&#x3002;</td>
+</tr>
+<tr>
+<td>--complement</td>
+<td>&#x62BD;&#x53D6;&#x6574;&#x4E2A;&#x6587;&#x672C;&#x884C;&#xFF0C;&#x9664;&#x4E86;&#x90A3;&#x4E9B;&#x7531;-c &#x548C;&#xFF0F;&#x6216;-f &#x9009;&#x9879;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x672C;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<pre class="language-"><code class="lang-shell"># &#x62BD;&#x53D6;&#x6240;&#x6709;&#x884C;&#x7B2C;&#x4E09;&#x4E2A;&#x5B57;&#x6BB5;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;
+cut -f 3 distros.txt
+# &#x62BD;&#x53D6;&#x6240;&#x6709;&#x884C;&#x7B2C;&#x4E09;&#x4E2A;&#x5B57;&#x6BB5;&#x540E;&#xFF0C;&#x518D;&#x62BD;&#x53D6;&#x6BCF;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;7-10&#x4E2A;&#x5B57;&#x7B26;
+cut -f 3 distros.txt | cut -c 7-10
+# &#x6307;&#x5B9A;&#x4E86;&#x5206;&#x9694;&#x7B26;
+cut -d &apos;:&apos; -f 1 /etc/passwd | head
+</code></pre>
+<p><strong>paste</strong></p>
+<p>&#x8FD9;&#x4E2A; paste &#x547D;&#x4EE4;&#x7684;&#x529F;&#x80FD;&#x6B63;&#x597D;&#x4E0E; cut &#x76F8;&#x53CD;&#xFF0C;&#x4F1A;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;<strong>&#x6587;&#x672C;&#x5217;</strong>&#x5230;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<p><strong>join</strong></p>
+<p>&#x7C7B;&#x4F3C;&#x4E8E; paste&#xFF0C;&#x5B83;&#x4F1A;&#x5F80;&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x5217;&#xFF0C;&#x901A;&#x5E38;&#x4E0E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x6709;&#x5173;&#x8054;&#x3002;</p>
+<pre class="language-"><code class="lang-shell"># &#x4E0D;&#x540C;&#x7684;&#x5217;&#x9879;&#x4F1A;&#x6DFB;&#x52A0;&#x5230;&#x7B2C;&#x4E8C;&#x4E2A;file&#x4E2D;
+join distros-key-names.txt distros-key-vernums.txt | head
+</code></pre>
+<h3 id="&#x6BD4;&#x8F83;&#x6587;&#x672C;"><a name="&#x6BD4;&#x8F83;&#x6587;&#x672C;" class="anchor-navigation-ex-anchor" href="#&#x6BD4;&#x8F83;&#x6587;&#x672C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6BD4;&#x8F83;&#x6587;&#x672C;</h3>
+<p><strong>comm</strong></p>
+<p><img src="https://raw.githubusercontent.com/ds19991999/githubimg/master/picgo/20180920204321.png" alt=""></p>
+<p>&#x7B2C;&#x4E00;&#x5217;&#x5305;&#x542B;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x72EC;&#x6709;&#x7684;&#x6587;&#x672C;&#x884C;&#xFF1B;&#x7B2C;&#x4E8C;&#x5217;&#x6587;&#x672C;&#x884C;&#x662F;&#x7B2C;&#x4E8C;&#x5217;&#x72EC;&#x6709;&#x7684;&#xFF1B;&#x7B2C;&#x4E09;&#x5217;&#x5305;&#x542B;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x5171;&#x6709;&#x7684;&#x6587;&#x672C;&#x884C;&#x3002;comm &#x652F;&#x6301; -n &#x5F62;&#x5F0F;&#x7684;&#x9009;&#x9879;&#xFF0C;&#x8FD9;&#x91CC; n &#x4EE3;&#x8868; 1&#xFF0C;2 &#x6216; 3&#x3002;</p>
+<pre class="language-"><code class="lang-shell"># &#x9690;&#x85CF;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x7684;&#x7B2C;1,2&#x5217;
+comm -12 file1.txt file2.txt
+</code></pre>
+<p><strong>diff</strong></p>
+<p>&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x5458;&#x7ECF;&#x5E38;&#x4F7F;&#x7528; diff &#x7A0B;&#x5E8F;&#x6765;&#x68C0;&#x67E5;&#x4E0D;&#x540C;&#x7A0B;&#x5E8F;&#x6E90;&#x7801; &#x7248;&#x672C;&#x4E4B;&#x95F4;&#x7684;&#x66F4;&#x6539;&#xFF0C;diff &#x80FD;&#x591F;&#x9012;&#x5F52;&#x5730;&#x68C0;&#x67E5;&#x6E90;&#x7801;&#x76EE;&#x5F55;&#xFF0C;&#x7ECF;&#x5E38;&#x79F0;&#x4E4B;&#x4E3A;&#x6E90;&#x7801;&#x6811;&#x3002;</p>
+<p>diff &#x66F4;&#x6539;&#x547D;&#x4EE4;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x6539;&#x53D8;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r1ar2</td>
+<td>&#x628A;&#x7B2C;&#x4E8C;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x4F4D;&#x7F6E; r2 &#x5904;&#x7684;&#x6587;&#x4EF6;&#x884C;&#x6DFB;&#x52A0;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x7684; r1 &#x5904;&#x3002;</td>
+</tr>
+<tr>
+<td>r1cr2</td>
+<td>&#x7528;&#x7B2C;&#x4E8C;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x4F4D;&#x7F6E; r2 &#x5904;&#x7684;&#x6587;&#x672C;&#x884C;&#x66F4;&#x6539;&#xFF08;&#x66FF;&#x4EE3;&#xFF09;&#x4F4D;&#x7F6E; r1 &#x5904;&#x7684;&#x6587;&#x672C;&#x884C;&#x3002;</td>
+</tr>
+<tr>
+<td>r1dr2</td>
+<td>&#x5220;&#x9664;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x4F4D;&#x7F6E; r1 &#x5904;&#x7684;&#x6587;&#x672C;&#x884C;&#xFF0C;&#x8FD9;&#x4E9B;&#x6587;&#x672C;&#x884C;&#x5C06;&#x4F1A;&#x51FA;&#x73B0;&#x5728;&#x7B2C;&#x4E8C;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x4F4D;&#x7F6E; r2 &#x5904;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<pre class="language-"><code class="lang-shell"># &#x4E0A;&#x4E0B;&#x6587;&#x6A21;&#x5F0F;&#xFF0C;&#x4E0E;github&#x4E0A;&#x9762;&#x7684;&#x4E00;&#x6837;
+diff -c file1.txt file2.txt
+</code></pre>
+<p>diff &#x4E0A;&#x4E0B;&#x6587;&#x6A21;&#x5F0F;&#x66F4;&#x6539;&#x6307;&#x793A;&#x7B26;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x6307;&#x793A;&#x7B26;</th>
+<th>&#x610F;&#x601D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>blank</td>
+<td>&#x4E0A;&#x4E0B;&#x6587;&#x663E;&#x793A;&#x884C;&#x3002;&#x5B83;&#x5E76;&#x4E0D;&#x8868;&#x793A;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;&#x3002;</td>
+</tr>
+<tr>
+<td>-</td>
+<td>&#x5220;&#x9664;&#x884C;&#x3002;&#x8FD9;&#x4E00;&#x884C;&#x5C06;&#x4F1A;&#x51FA;&#x73B0;&#x5728;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x7B2C;&#x4E8C;&#x4E2A;&#x6587;&#x4EF6;&#x5185;&#x3002;</td>
+</tr>
+<tr>
+<td>+</td>
+<td>&#x6DFB;&#x52A0;&#x884C;&#x3002;&#x8FD9;&#x4E00;&#x884C;&#x5C06;&#x4F1A;&#x51FA;&#x73B0;&#x5728;&#x7B2C;&#x4E8C;&#x4E2A;&#x6587;&#x4EF6;&#x5185;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</td>
+</tr>
+<tr>
+<td>!</td>
+<td>&#x66F4;&#x6539;&#x884C;&#x3002;&#x5C06;&#x4F1A;&#x663E;&#x793A;&#x67D0;&#x4E2A;&#x6587;&#x672C;&#x884C;&#x7684;&#x4E24;&#x4E2A;&#x7248;&#x672C;&#xFF0C;&#x6BCF;&#x4E2A;&#x7248;&#x672C;&#x4F1A;&#x51FA;&#x73B0;&#x5728;&#x66F4;&#x6539;&#x7EC4;&#x7684;&#x5404;&#x81EA;&#x90E8;&#x5206;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p>diff &#x7EDF;&#x4E00;&#x6A21;&#x5F0F;&#x66F4;&#x6539;&#x6307;&#x793A;&#x7B26;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x7B26;</th>
+<th>&#x610F;&#x601D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x7A7A;&#x683C;</td>
+<td>&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x90FD;&#x5305;&#x542B;&#x8FD9;&#x4E00;&#x884C;&#x3002;</td>
+</tr>
+<tr>
+<td>-</td>
+<td>&#x5728;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x5220;&#x9664;&#x8FD9;&#x4E00;&#x884C;&#x3002;</td>
+</tr>
+<tr>
+<td>+</td>
+<td>&#x6DFB;&#x52A0;&#x8FD9;&#x4E00;&#x884C;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>patch</strong></p>
+<p>&#x5B83;&#x63A5;&#x53D7;&#x4ECE; diff &#x7A0B;&#x5E8F;&#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x5E76;&#x4E14;&#x901A;&#x5E38;&#x88AB;&#x7528;&#x6765; &#x628A;&#x8F83;&#x8001;&#x7684;&#x6587;&#x4EF6;&#x7248;&#x672C;&#x8F6C;&#x53D8;&#x4E3A;&#x8F83;&#x65B0;&#x7684;&#x6587;&#x4EF6;&#x7248;&#x672C;&#x3002;</p>
+<pre class="language-"><code class="lang-shell">diff -Naur old_file new_file &gt; diff_file
+# &#x5F97;&#x5230;diff_file&#x5E94;&#x7528;&#x5230;&#x65E7;&#x6587;&#x4EF6;&#x4E2D;
+patch &lt; diff_file
+</code></pre>
+<p><strong>tr</strong></p>
+<p>&#x4E00;&#x79CD;&#x57FA;&#x4E8E;&#x5B57;&#x7B26;&#x7684;&#x67E5;&#x627E;&#x548C;&#x66FF;&#x6362;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre class="language-"><code class="lang-shell">alien@localhost:~ $ echo &quot;lowercase letters&quot; | tr a-z A-Z
+LOWERCASE LETTERS
+</code></pre>
+<p>&#x5B57;&#x7B26;&#x96C6;&#x53EF;&#x4EE5;&#x7528;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x6765;&#x8868;&#x793A;&#xFF1A;</p>
+<ol>
+<li>&#x4E00;&#x4E2A;&#x679A;&#x4E3E;&#x5217;&#x8868;&#x3002;&#x4F8B;&#x5982;&#xFF0C; ABCDEFGHIJKLMNOPQRSTUVWXYZ</li>
+<li>&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x57DF;&#x3002;&#x4F8B;&#x5982;&#xFF0C;A-Z &#x3002;&#x6CE8;&#x610F;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x6709;&#x65F6;&#x5019;&#x9762;&#x4E34;&#x4E0E;&#x5176;&#x5B83;&#x547D;&#x4EE4;&#x76F8;&#x540C;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5F52;&#x56E0;&#x4E8E; &#x8BED;&#x7CFB;&#x7684;&#x6392;&#x5E8F;&#x89C4;&#x5219;&#xFF0C;&#x56E0;&#x6B64;&#x5E94;&#x8BE5;&#x8C28;&#x614E;&#x4F7F;&#x7528;&#x3002;</li>
+<li>POSIX &#x5B57;&#x7B26;&#x7C7B;&#x3002;&#x4F8B;&#x5982;&#xFF0C;[:upper:]</li>
+</ol>
+<pre class="language-"><code class="lang-shell"># MS-DOS &#x6587;&#x672C;&#x6587;&#x4EF6;&#x4E3A; Unix &#x98CE;&#x683C;&#x6587;&#x672C;,&#x6BCF;&#x884C;&#x672B;&#x5C3E;&#x7684;&#x56DE;&#x8F66;&#x7B26;&#x9700;&#x8981;&#x88AB;&#x5220;&#x9664;
+tr -d &apos;\r&apos; &lt; dos_file &gt; unix_file
+# &#x4F7F;&#x7528;-s &#x9009;&#x9879;&#xFF0C;tr &#x547D;&#x4EE4;&#x80FD;&#x201C;&#x6324;&#x538B;&#x201D;&#xFF08;&#x5220;&#x9664;&#xFF09;&#x91CD;&#x590D;&#x7684;&#x5B57;&#x7B26;&#x5B9E;&#x4F8B;,&#x91CD;&#x590D;&#x7684;&#x5B57;&#x7B26;&#x5FC5;&#x987B;&#x662F;&#x76F8;&#x90BB;&#x7684;
+alien@localhost:~ $ echo &quot;aaabbbccc&quot; | tr -s ab
+abccc
+</code></pre>
+<p><strong>sed</strong></p>
+<p>sed &#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;&#x662F;&#x8981;&#x4E0D;&#x7ED9;&#x51FA;&#x5355;&#x4E2A;&#x7F16;&#x8F91;&#x547D;&#x4EE4;&#xFF08;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#xFF09;&#x8981;&#x4E0D;&#x5C31;&#x662F;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x540D;&#xFF0C; &#x7136;&#x540E;&#x5B83;&#x5C31;&#x6309;&#x884C;&#x6765;&#x6267;&#x884C;&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x3002;&#x66FF;&#x6362;&#x547D;&#x4EE4;&#x7531;&#x5B57;&#x6BCD; s&#x540E;&#x9762;&#x8DDF;&#x7740;&#x7684;&#x5B57;&#x7B26;&#x6765;&#x4EE3;&#x8868;&#x3002;</p>
+<pre class="language-"><code class="lang-shell"># &#x4E24;&#x6761;&#x547D;&#x4EE4;&#x7B49;&#x4EF7;,&#x5C06;&#x8F93;&#x5165;&#x7684;&#x6587;&#x672C;&#x4E2D;&#x7684;front&#x66FF;&#x6362;&#x4E3A;back
+echo &quot;front&quot; | sed &apos;s_front_back_&apos;
+echo &quot;front&quot; | sed &apos;s/front/back/&apos;
+# &#x5BF9;&#x4EC5;&#x6709;&#x4E00;&#x884C;&#x6587;&#x672C;&#x7684;&#x8F93;&#x5165;&#x6D41;&#x7684;&#x7B2C;&#x4E00;&#x884C;&#x6267;&#x884C;&#x66FF;&#x6362;&#x64CD;&#x4F5C;
+echo &quot;front&quot; | sed &apos;1s/front/back/&apos;
+</code></pre>
+<p>sed &#x5730;&#x5740;&#x8868;&#x793A;&#x6CD5;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5730;&#x5740;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td>&#x884C;&#x53F7;&#xFF0C;n &#x662F;&#x4E00;&#x4E2A;&#x6B63;&#x6574;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>$</td>
+<td>&#x6700;&#x540E;&#x4E00;&#x884C;&#x3002;</td>
+</tr>
+<tr>
+<td>/regexp/</td>
+<td>&#x6240;&#x6709;&#x5339;&#x914D;&#x4E00;&#x4E2A; POSIX &#x57FA;&#x672C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x6587;&#x672C;&#x884C;&#x3002;&#x6CE8;&#x610F;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x901A;&#x8FC7; &#x659C;&#x6760;&#x5B57;&#x7B26;&#x754C;&#x5B9A;&#x3002;&#x9009;&#x62E9;&#x6027;&#x5730;&#xFF0C;&#x8FD9;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x53EF;&#x80FD;&#x7531;&#x4E00;&#x4E2A;&#x5907;&#x7528;&#x5B57;&#x7B26;&#x754C;&#x5B9A;&#xFF0C;&#x901A;&#x8FC7;\cregexpc &#x6765; &#x6307;&#x5B9A;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8FD9;&#x91CC; c &#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5907;&#x7528;&#x7684;&#x5B57;&#x7B26;&#x3002;</td>
+</tr>
+<tr>
+<td>addr1,addr2</td>
+<td>&#x4ECE; addr1 &#x5230; addr2 &#x8303;&#x56F4;&#x5185;&#x7684;&#x6587;&#x672C;&#x884C;&#xFF0C;&#x5305;&#x542B;&#x5730;&#x5740; addr2 &#x5728;&#x5185;&#x3002;&#x5730;&#x5740;&#x53EF;&#x80FD;&#x662F;&#x4E0A;&#x8FF0;&#x4EFB;&#x610F; &#x5355;&#x72EC;&#x7684;&#x5730;&#x5740;&#x5F62;&#x5F0F;&#x3002;</td>
+</tr>
+<tr>
+<td>first~step</td>
+<td>&#x5339;&#x914D;&#x7531;&#x6570;&#x5B57; first &#x4EE3;&#x8868;&#x7684;&#x6587;&#x672C;&#x884C;&#xFF0C;&#x7136;&#x540E;&#x968F;&#x540E;&#x7684;&#x6BCF;&#x4E2A;&#x5728; step &#x95F4;&#x9694;&#x5904;&#x7684;&#x6587;&#x672C;&#x884C;&#x3002;&#x4F8B;&#x5982; 1~2 &#x662F;&#x6307;&#x6BCF;&#x4E2A;&#x4F4D;&#x4E8E;&#x5076;&#x6570;&#x884C;&#x53F7;&#x7684;&#x6587;&#x672C;&#x884C;&#xFF0C;5~5 &#x5219;&#x6307;&#x7B2C;&#x4E94;&#x884C;&#x548C;&#x4E4B;&#x540E;&#x6BCF;&#x4E94;&#x884C;&#x4F4D;&#x7F6E;&#x7684;&#x6587;&#x672C;&#x884C;&#x3002;</td>
+</tr>
+<tr>
+<td>addr1,+n</td>
+<td>&#x5339;&#x914D;&#x5730;&#x5740; addr1 &#x548C;&#x968F;&#x540E;&#x7684; n &#x4E2A;&#x6587;&#x672C;&#x884C;&#x3002;</td>
+</tr>
+<tr>
+<td>addr!</td>
+<td>&#x5339;&#x914D;&#x6240;&#x6709;&#x7684;&#x6587;&#x672C;&#x884C;&#xFF0C;&#x9664;&#x4E86; addr &#x4E4B;&#x5916;&#xFF0C;addr &#x53EF;&#x80FD;&#x662F;&#x4E0A;&#x8FF0;&#x4EFB;&#x610F;&#x7684;&#x5730;&#x5740;&#x5F62;&#x5F0F;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<pre class="language-"><code class="lang-shell"># &#x6253;&#x5370;&#x51FA;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x6587;&#x672C;&#x884C;&#xFF0C;&#x5F00;&#x59CB;&#x4E8E;&#x7B2C;&#x4E00;&#x884C;&#xFF0C;&#x76F4;&#x5230;&#x7B2C;&#x4E94;&#x884C;
+# &#x6211;&#x4EEC;&#x4F7F;&#x7528; p &#x547D;&#x4EE4;&#xFF0C; &#x5176;&#x5C31;&#x662F;&#x7B80;&#x5355;&#x5730;&#x628A;&#x5339;&#x914D;&#x7684;&#x6587;&#x672C;&#x884C;&#x6253;&#x5370;&#x51FA;&#x6765;
+sed -n &apos;1,5p&apos; distros.txt
+</code></pre>
+<p> <strong>sed &#x57FA;&#x672C;&#x7F16;&#x8F91;&#x547D;&#x4EE4;:</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>&#x8F93;&#x51FA;&#x5F53;&#x524D;&#x7684;&#x884C;&#x53F7;&#x3002;</td>
+</tr>
+<tr>
+<td>a</td>
+<td>&#x5728;&#x5F53;&#x524D;&#x884C;&#x4E4B;&#x540E;&#x8FFD;&#x52A0;&#x6587;&#x672C;&#x3002;</td>
+</tr>
+<tr>
+<td>d</td>
+<td>&#x5220;&#x9664;&#x5F53;&#x524D;&#x884C;&#x3002;</td>
+</tr>
+<tr>
+<td>i</td>
+<td>&#x5728;&#x5F53;&#x524D;&#x884C;&#x4E4B;&#x524D;&#x63D2;&#x5165;&#x6587;&#x672C;&#x3002;</td>
+</tr>
+<tr>
+<td>p</td>
+<td>&#x6253;&#x5370;&#x5F53;&#x524D;&#x884C;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;sed &#x7A0B;&#x5E8F;&#x6253;&#x5370;&#x6BCF;&#x4E00;&#x884C;&#xFF0C;&#x5E76;&#x4E14;&#x53EA;&#x662F;&#x7F16;&#x8F91;&#x6587;&#x4EF6;&#x4E2D;&#x5339;&#x914D; &#x6307;&#x5B9A;&#x5730;&#x5740;&#x7684;&#x6587;&#x672C;&#x884C;&#x3002;&#x901A;&#x8FC7;&#x6307;&#x5B9A;-n &#x9009;&#x9879;&#xFF0C;&#x8FD9;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x884C;&#x4E3A;&#x80FD;&#x591F;&#x88AB;&#x5FFD;&#x7565;&#x3002;</td>
+</tr>
+<tr>
+<td>q</td>
+<td>&#x9000;&#x51FA; sed&#xFF0C;&#x4E0D;&#x518D;&#x5904;&#x7406;&#x66F4;&#x591A;&#x7684;&#x6587;&#x672C;&#x884C;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;-n &#x9009;&#x9879;&#xFF0C;&#x8F93;&#x51FA;&#x5F53;&#x524D;&#x884C;&#x3002;</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>&#x9000;&#x51FA; sed&#xFF0C;&#x4E0D;&#x518D;&#x5904;&#x7406;&#x66F4;&#x591A;&#x7684;&#x6587;&#x672C;&#x884C;&#x3002;</td>
+</tr>
+<tr>
+<td>s/regexp/replacement/</td>
+<td>&#x53EA;&#x8981;&#x627E;&#x5230;&#x4E00;&#x4E2A; regexp &#x5339;&#x914D;&#x9879;&#xFF0C;&#x5C31;&#x66FF;&#x6362;&#x4E3A; replacement &#x7684;&#x5185;&#x5BB9;&#x3002; replacement &#x53EF;&#x80FD;&#x5305;&#x62EC;&#x7279;&#x6B8A;&#x5B57;&#x7B26; &amp;&#xFF0C;&#x5176;&#x7B49;&#x4EF7;&#x4E8E;&#x7531; regexp &#x5339;&#x914D;&#x7684;&#x6587;&#x672C;&#x3002;&#x53E6;&#x5916;&#xFF0C; replacement &#x53EF;&#x80FD;&#x5305;&#x542B;&#x5E8F;&#x5217; \1&#x5230; \9&#xFF0C;&#x5176;&#x662F; regexp &#x4E2D;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x5B50;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x67E5;&#x770B; &#x4E0B;&#x9762; back references &#x90E8;&#x5206;&#x7684;&#x8BA8;&#x8BBA;&#x3002;&#x5728; replacement &#x672B;&#x5C3E;&#x7684;&#x659C;&#x6760;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E00;&#x4E2A; &#x53EF;&#x9009;&#x7684;&#x6807;&#x5FD7;&#xFF0C;&#x6765;&#x4FEE;&#x6539; s &#x547D;&#x4EE4;&#x7684;&#x884C;&#x4E3A;&#x3002;</td>
+</tr>
+<tr>
+<td>y/set1/set2</td>
+<td>&#x6267;&#x884C;&#x5B57;&#x7B26;&#x8F6C;&#x5199;&#x64CD;&#x4F5C;&#xFF0C;&#x901A;&#x8FC7;&#x628A; set1 &#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x8F6C;&#x53D8;&#x4E3A;&#x76F8;&#x5BF9;&#x5E94;&#x7684; set2 &#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x3002; &#x6CE8;&#x610F;&#x4E0D;&#x540C;&#x4E8E; tr &#x7A0B;&#x5E8F;&#xFF0C;sed &#x8981;&#x6C42;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x96C6;&#x5408;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x957F;&#x5EA6;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<pre class="language-"><code class="lang-shell"># &#x53EF;&#x9009;&#x6807;&#x5FD7;&#x662F; g &#x6807;&#x5FD7;&#xFF0C;&#x5176; &#x6307;&#x793A; sed &#x5BF9;&#x67D0;&#x4E2A;&#x6587;&#x672C;&#x884C;&#x5168;&#x8303;&#x56F4;&#x5730;&#x6267;&#x884C;&#x67E5;&#x627E;&#x548C;&#x66FF;&#x4EE3;&#x64CD;&#x4F5C;
+# &#x4E0A;&#x8FB9;&#x53EA;&#x662F;&#x5BF9;&#x7B2C;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x8FDB;&#x884C;&#x66FF;&#x6362;
+echo &quot;aaabbbccc&quot; | sed &apos;s/b/B/g&apos;
+</code></pre>
+<p><strong>aspell</strong></p>
+<p>&#x4E00;&#x6B3E;<strong>&#x4EA4;&#x4E92;&#x5F0F;</strong>&#x7684;<strong>&#x62FC;&#x5199;&#x68C0;&#x67E5;&#x5668;</strong>&#xFF0C;&#x62FC;&#x5199;&#x68C0;&#x67E5;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x7B80;&#x5355;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x4F7F;&#x7528; aspell:</p>
+<pre class="language-"><code class="lang-shell">aspell check textfile
+</code></pre>
+<p>split&#xFF08;&#x628A;&#x6587;&#x4EF6;&#x5206;&#x5272;&#x6210;&#x788E;&#x7247;&#xFF09;&#xFF0C; csplit&#xFF08;&#x57FA;&#x4E8E;&#x4E0A;&#x4E0B;&#x6587;&#x628A;&#x6587;&#x4EF6;&#x5206;&#x5272;&#x6210;&#x788E;&#x7247;&#xFF09;&#xFF0C;&#x548C; sdiff&#xFF08;&#x5E76;&#x6392;&#x5408;&#x5E76;&#x6587;&#x4EF6;&#x5DEE;&#x5F02;&#xFF09;</p>
+<h2 id="&#x516B;&#x3001;&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;"><a name="&#x516B;&#x3001;&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;" class="anchor-navigation-ex-anchor" href="#&#x516B;&#x3001;&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516B;&#x3001;&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;</h2>
+<pre class="language-"><code class="lang-shell">nl &#x2013; &#x6DFB;&#x52A0;&#x884C;&#x53F7;
+fold &#x2013; &#x9650;&#x5236;&#x6587;&#x4EF6;&#x5217;&#x5BBD;
+fmt &#x2013; &#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6587;&#x672C;&#x683C;&#x5F0F;&#x8F6C;&#x6362;&#x5668;
+pr &#x2013; &#x8BA9;&#x6587;&#x672C;&#x4E3A;&#x6253;&#x5370;&#x505A;&#x597D;&#x51C6;&#x5907;
+printf &#x2013; &#x683C;&#x5F0F;&#x5316;&#x6570;&#x636E;&#x5E76;&#x6253;&#x5370;&#x51FA;&#x6765;
+groff &#x2013; &#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x5316;&#x7CFB;&#x7EDF;
+</code></pre>
+<h3 id="&#x7B80;&#x5355;&#x7684;&#x683C;&#x5F0F;&#x5316;&#x5DE5;&#x5177;"><a name="&#x7B80;&#x5355;&#x7684;&#x683C;&#x5F0F;&#x5316;&#x5DE5;&#x5177;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x5355;&#x7684;&#x683C;&#x5F0F;&#x5316;&#x5DE5;&#x5177;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x5355;&#x7684;&#x683C;&#x5F0F;&#x5316;&#x5DE5;&#x5177;</h3>
+<p>nl - &#x6DFB;&#x52A0;&#x884C;&#x53F7;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">nl distros.txt | head
+</code></pre>
+<p>&#x5982;&#x679C;nl&#x540C;&#x65F6;&#x5904;&#x7406;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x5B83;&#x4F1A;&#x628A;&#x4ED6;&#x4EEC;&#x5F53;&#x6210;&#x4E00;&#x4E2A;&#x5355;&#x4E00;&#x7684; &#x6587;&#x672C;&#x6D41;&#xFF0C;&#x5904;&#x7406;&#x5B8C;&#x4E00;&#x4E2A;&#x6807;&#x8BB0;&#x5143;&#x7D20;&#x4E4B;&#x540E;&#xFF0C;nl &#x628A;&#x5B83;&#x4ECE;&#x6587;&#x672C;&#x6D41;&#x4E2D;&#x5220;&#x9664;&#x3002;&#x5B83;&#x652F;&#x6301;&#x4E00;&#x4E2A;&#x53EB;&#x201C;&#x903B;&#x8F91;&#x9875;&#x9762;&#x201D;&#x7684;&#x6982;&#x5FF5;&#x3002;</p>
+<p>nl&#x6807;&#x8BB0;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x6807;&#x8BB0;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\:\:\:</td>
+<td>&#x903B;&#x8F91;&#x9875;&#x9875;&#x7709;&#x5F00;&#x59CB;&#x5904;</td>
+</tr>
+<tr>
+<td>\:\:</td>
+<td>&#x903B;&#x8F91;&#x9875;&#x4E3B;&#x4F53;&#x5F00;&#x59CB;&#x5904;</td>
+</tr>
+<tr>
+<td>\:</td>
+<td>&#x903B;&#x8F91;&#x9875;&#x9875;&#x811A;&#x5F00;&#x59CB;&#x5904;</td>
+</tr>
+</tbody>
+</table>
+<p>nl &#x9009;&#x9879;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x9009;&#x9879;</th>
+<th>&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-b style</td>
+<td>&#x628A; body &#x6309;&#x88AB;&#x8981;&#x6C42;&#x65B9;&#x5F0F;&#x6570;&#x884C;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x4EE5;&#x4E0B;&#x65B9;&#x5F0F;&#xFF1A;a = &#x6570;&#x6240;&#x6709;&#x884C;t = &#x6570;&#x975E;&#x7A7A;&#x884C;&#x3002;&#x8FD9;&#x662F;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x3002;n = &#x65E0;pregexp = &#x53EA;&#x6570;&#x90A3;&#x4E9B;&#x5339;&#x914D;&#x4E86;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x884C;</td>
+</tr>
+<tr>
+<td>-f style</td>
+<td>&#x5C06; footer &#x6309;&#x88AB;&#x8981;&#x6C42;&#x8BBE;&#x7F6E;&#x6570;&#x3002;&#x9ED8;&#x8BA4;&#x662F;&#x65E0;</td>
+</tr>
+<tr>
+<td>-h style</td>
+<td>&#x5C06; header &#x6309;&#x88AB;&#x8981;&#x6C42;&#x8BBE;&#x7F6E;&#x6570;&#x3002;&#x9ED8;&#x8BA4;&#x662F;</td>
+</tr>
+<tr>
+<td>-i number</td>
+<td>&#x5C06;&#x9875;&#x9762;&#x589E;&#x52A0;&#x91CF;&#x8BBE;&#x7F6E;&#x4E3A;&#x6570;&#x5B57;&#x3002;&#x9ED8;&#x8BA4;&#x662F;&#x4E00;&#x3002;</td>
+</tr>
+<tr>
+<td>-n format</td>
+<td>&#x8BBE;&#x7F6E;&#x6570;&#x6570;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x683C;&#x5F0F;&#x53EF;&#x4EE5;&#x662F;&#xFF1A;ln = &#x5DE6;&#x504F;&#xFF0C;&#x6CA1;&#x6709;&#x524D;&#x5BFC;&#x96F6;&#x3002;rn = &#x53F3;&#x504F;&#xFF0C;&#x6CA1;&#x6709;&#x524D;&#x5BFC;&#x96F6;&#x3002;rz = &#x53F3;&#x504F;&#xFF0C;&#x6709;&#x524D;&#x5BFC;&#x96F6;&#x3002;</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>&#x4E0D;&#x8981;&#x5728;&#x6CA1;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x9875;&#x9762;&#x7684;&#x5F00;&#x59CB;&#x91CD;&#x8BBE;&#x9875;&#x9762;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>-s string</td>
+<td>&#x5728;&#x6CA1;&#x4E00;&#x4E2A;&#x884C;&#x7684;&#x672B;&#x5C3E;&#x52A0;&#x5B57;&#x7B26;&#x4F5C;&#x5206;&#x5272;&#x7B26;&#x53F7;&#x3002;&#x9ED8;&#x8BA4;&#x662F;&#x5355;&#x4E2A;&#x7684; tab&#x3002;</td>
+</tr>
+<tr>
+<td>-v number</td>
+<td>&#x5C06;&#x6BCF;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x9875;&#x9762;&#x7684;&#x7B2C;&#x4E00;&#x884C;&#x8BBE;&#x7F6E;&#x6210;&#x6570;&#x5B57;&#x3002;&#x9ED8;&#x8BA4;&#x662F;&#x4E00;&#x3002;</td>
+</tr>
+<tr>
+<td>-w width</td>
+<td>&#x5C06;&#x884C;&#x6570;&#x7684;&#x5BBD;&#x5EA6;&#x8BBE;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x516D;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p>fold - &#x9650;&#x5236;&#x6587;&#x4EF6;&#x884C;&#x5BBD;:</p>
+<pre class="language-"><code class="lang-shell"># &#x8BBE;&#x7F6E;&#x884C;&#x5BBD;&#x4E3A;12&#xFF08;&#x5B57;&#x7B26;&#xFF09;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;80
+echo &quot;The quick brown fox jumped over the lazy dog.&quot; | fold -w 12
+# &#x589E;&#x52A0;s&#x9009;&#x9879;&#x8003;&#x8651;&#x5355;&#x8BCD;&#x8FB9;&#x754C;
+echo &quot;The quick brown fox jumped over the lazy dog.&quot; | fold -w 12 -s
+</code></pre>
+<p>fmt - &#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6587;&#x672C;&#x683C;&#x5F0F;&#x5668;&#xFF1A;&#x586B;&#x5145;&#x548C;&#x8FDE;&#x63A5;&#x6587;&#x672C;&#x884C;&#xFF0C;&#x540C;&#x65F6;&#x4FDD;&#x7559;&#x7A7A;&#x767D;&#x7B26;&#x548C;&#x7F29;&#x8FDB;</p>
+<pre class="language-"><code class="lang-shell"># &#x8BBE;&#x7F6E;50 &#x4E2A;&#x5B57;&#x7B26;&#x5BBD;&#xFF0C;fmt &#x4F1A;&#x4FDD;&#x7559;&#x7B2C;&#x4E00;&#x884C;&#x7684;&#x7F29;&#x8FDB;
+fmt -w 50 fmt-info.txt | head
+# &#x683C;&#x5F0F;&#x6587;&#x4EF6;&#x9009;&#x4E2D;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x901A;&#x8FC7;&#x5728;&#x5F00;&#x5934;&#x4F7F;&#x7528;&#x4E00;&#x6837;&#x7684;&#x7B26;&#x53F7;&#xFF0C;&#x6CE8;&#x91CA;&#x884C;&#x4F1A;&#x5408;&#x5E76;
+fmt -w 50 -p &apos;# &apos; fmt-code.txt
+</code></pre>
+<p>pr &#x2013; &#x683C;&#x5F0F;&#x5316;&#x6253;&#x5370;&#x6587;&#x672C;</p>
+<p>pr &#x7A0B;&#x5E8F;&#x7528;&#x6765;&#x628A;&#x6587;&#x672C;&#x5206;&#x9875;&#xFF0C;&#x5F53;&#x6253;&#x5370;&#x6587;&#x672C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7ECF;&#x5E38;&#x5E0C;&#x671B;&#x7528;&#x51E0;&#x4E2A;&#x7A7A;&#x884C;&#x5728;&#x8F93;&#x51FA;&#x7684;&#x9875;&#x9762;&#x7684;&#x9876;&#x90E8;&#x6216;&#x5E95;&#x90E8;&#x6DFB;&#x52A0;&#x7A7A;&#x767D;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x8FD9;&#x4E9B;&#x7A7A;&#x884C;&#x80FD;&#x591F;&#x7528;&#x6765;&#x63D2;&#x5165;&#x5230;&#x6BCF;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x9875;&#x7709;&#x6216;&#x9875;&#x811A;&#x3002;</p>
+<p><img src="https://raw.githubusercontent.com/ds19991999/githubimg/master/picgo/20180921085555.png" alt=""></p>
+<p> -l &#x9009;&#x9879;&#xFF08;&#x9875;&#x957F;&#xFF09;&#x548C; -w &#x9009;&#x9879;&#xFF08;&#x9875;&#x5BBD;&#xFF09;&#x5B9A;&#x4E49;&#x4E86;&#x5BBD;65&#x5217;&#xFF0C;&#x957F;15&#x884C;&#x7684;&#x4E00;&#x4E2A;&#x201C;&#x9875;&#x9762;&#x201D;&#x3002; pr &#x4E3A; distros.txt &#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x7F16;&#x8BA2;&#x9875;&#x7801;&#xFF0C;&#x7528;&#x7A7A;&#x884C;&#x5206;&#x5F00;&#x5404;&#x9875;&#x9762;&#xFF0C;&#x751F;&#x6210;&#x4E86;&#x5305;&#x542B;&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#x3001;&#x6587;&#x4EF6;&#x540D;&#x3001;&#x9875;&#x7801;&#x7684;&#x9ED8;&#x8BA4;&#x9875;&#x7709;</p>
+<p>printf&#xFF1A;&#x4E3B;&#x8981;&#x7528;&#x5728;&#x811A;&#x672C;&#x4E2D;&#xFF0C;&#x7528;&#x4E8E;&#x683C;&#x5F0F;&#x5316;&#x8868;&#x683C;&#x6570;&#x636E;</p>
+<pre class="language-"><code class="lang-shell">printf &#x201C;format&#x201D; arguments
+# &#x57FA;&#x672C;&#x4E0A;&#x548C;C&#x8BED;&#x8A00;&#x4E00;&#x6837;
+alien@localhost:~ $ printf &quot;I formatted the string: %s\n&quot; foo
+I formatted the string: foo
+</code></pre>
+<p>printf&#x8F6C;&#x6362;&#x89C4;&#x8303;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x7EC4;&#x4EF6;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d</td>
+<td>&#x5C06;&#x6570;&#x5B57;&#x683C;&#x5F0F;&#x5316;&#x4E3A;&#x5E26;&#x7B26;&#x53F7;&#x7684;&#x5341;&#x8FDB;&#x5236;&#x6574;&#x6570;</td>
+</tr>
+<tr>
+<td>f</td>
+<td>&#x683C;&#x5F0F;&#x5316;&#x5E76;&#x8F93;&#x51FA;&#x6D6E;&#x70B9;&#x6570;</td>
+</tr>
+<tr>
+<td>o</td>
+<td>&#x5C06;&#x6574;&#x6570;&#x683C;&#x5F0F;&#x5316;&#x4E3A;&#x516B;&#x8FDB;&#x5236;&#x6570;</td>
+</tr>
+<tr>
+<td>s</td>
+<td>&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x683C;&#x5F0F;&#x5316;</td>
+</tr>
+<tr>
+<td>x</td>
+<td>&#x5C06;&#x6574;&#x6570;&#x683C;&#x5F0F;&#x5316;&#x4E3A;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x5FC5;&#x8981;&#x65F6;&#x4F7F;&#x7528;&#x5C0F;&#x5199;a-f</td>
+</tr>
+<tr>
+<td>X</td>
+<td>&#x4E0E; x &#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x53D8;&#x4E3A;&#x5927;&#x5199;</td>
+</tr>
+<tr>
+<td>%</td>
+<td>&#x6253;&#x5370; % &#x7B26;&#x53F7; (&#x6BD4;&#x5982;&#xFF0C;&#x6307;&#x5B9A; &#x201C;%%&#x201D;)</td>
+</tr>
+</tbody>
+</table>
+<pre class="language-"><code class="lang-shell">alien@localhost:~ $ printf &quot;%d, %f, %o, %s, %x, %X\n&quot; 380 380 380 380 380 380
+380, 380.000000, 574, 380, 17c, 17C
+</code></pre>
+<p>&#x5B8C;&#x6574;&#x8F6C;&#x6362;&#x89C4;&#x8303;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">%[flags][width][.precision]conversion_specification
+</code></pre>
+<p>printf &#x8F6C;&#x6362;&#x53EF;&#x9009;&#x89C4;&#x8303;&#x7EC4;&#x4EF6;</p>
+<table>
+<thead>
+<tr>
+<th>&#x7EC4;&#x4EF6;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flags</td>
+<td>&#x6709;5&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x6807;&#x5FD7;:# &#x2013; &#x4F7F;&#x7528;&#x201C;&#x5907;&#x7528;&#x683C;&#x5F0F;&#x201D;&#x8F93;&#x51FA;&#x3002;&#x8FD9;&#x53D6;&#x51B3;&#x4E8E;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;&#x5BF9;&#x4E8E;o&#xFF08;&#x516B;&#x8FDB;&#x5236;&#x6570;&#xFF09;&#x8F6C;&#x6362;&#xFF0C;&#x8F93;&#x51FA;&#x4EE5;0&#x4E3A;&#x524D;&#x7F00;.&#x5BF9;&#x4E8E;x&#x548C;X&#xFF08;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;&#xFF09;&#x8F6C;&#x6362;&#xFF0C;&#x8F93;&#x51FA;&#x5206;&#x522B;&#x4EE5;0x&#x6216;0X&#x4E3A;&#x524D;&#x7F00;&#x3002;0&#x2013;(&#x96F6;) &#x7528;&#x96F6;&#x586B;&#x5145;&#x8F93;&#x51FA;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x8BE5;&#x5B57;&#x6BB5;&#x5C06;&#x586B;&#x5145;&#x524D;&#x5BFC;&#x96F6;&#xFF0C;&#x6BD4;&#x5982;&#x201C;000380&#x201D;&#x3002;- &#x2013; (&#x7834;&#x6298;&#x53F7;) &#x5DE6;&#x5BF9;&#x9F50;&#x8F93;&#x51FA;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;printf&#x53F3;&#x5BF9;&#x9F50;&#x8F93;&#x51FA;&#x3002;&#x2018; &#x2019; &#x2013; (&#x7A7A;&#x683C;) &#x5728;&#x6B63;&#x6570;&#x524D;&#x7A7A;&#x4E00;&#x683C;&#x3002;+ &#x2013; (&#x52A0;&#x53F7;) &#x5728;&#x6B63;&#x6570;&#x524D;&#x6DFB;&#x52A0;&#x52A0;&#x53F7;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;printf &#x53EA;&#x5728;&#x8D1F;&#x6570;&#x524D;&#x6DFB;&#x52A0;&#x7B26;&#x53F7;&#x3002;</td>
+</tr>
+<tr>
+<td>width</td>
+<td>&#x6307;&#x5B9A;&#x6700;&#x5C0F;&#x5B57;&#x6BB5;&#x5BBD;&#x5EA6;&#x7684;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>.precision</td>
+<td>&#x5BF9;&#x4E8E;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x6307;&#x5B9A;&#x5C0F;&#x6570;&#x70B9;&#x540E;&#x7684;&#x7CBE;&#x5EA6;&#x4F4D;&#x6570;&#x3002;&#x5BF9;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#xFF0C;&#x6307;&#x5B9A;&#x8981;&#x8F93;&#x51FA;&#x7684;&#x5B57;&#x7B26;&#x6570;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x81EA;&#x53D8;&#x91CF;</th>
+<th>&#x683C;&#x5F0F;</th>
+<th>&#x7ED3;&#x679C;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>380</td>
+<td>&quot;%d&quot;</td>
+<td>380</td>
+<td>&#x7B80;&#x5355;&#x683C;&#x5F0F;&#x5316;&#x6574;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>380</td>
+<td>&quot;%#x&quot;</td>
+<td>0x17c</td>
+<td>&#x4F7F;&#x7528;&#x201C;&#x66FF;&#x4EE3;&#x683C;&#x5F0F;&#x201D;&#x6807;&#x5FD7;&#x5C06;&#x6574;&#x6570;&#x683C;&#x5F0F;&#x5316;&#x4E3A;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>380</td>
+<td>&quot;%05d&quot;</td>
+<td>00380</td>
+<td>&#x7528;&#x524D;&#x5BFC;&#x96F6;&#xFF08;padding&#xFF09;&#x683C;&#x5F0F;&#x5316;&#x6574;&#x6570;&#xFF0C;&#x4E14;&#x6700;&#x5C0F;&#x5B57;&#x6BB5;&#x5BBD;&#x5EA6;&#x4E3A;&#x4E94;&#x4E2A;&#x5B57;&#x7B26;&#x3002;</td>
+</tr>
+<tr>
+<td>380</td>
+<td>&quot;%05.5f&quot;</td>
+<td>380.00000</td>
+<td>&#x4F7F;&#x7528;&#x524D;&#x5BFC;&#x96F6;&#x548C;&#x4E94;&#x4F4D;&#x5C0F;&#x6570;&#x4F4D;&#x7CBE;&#x5EA6;&#x683C;&#x5F0F;&#x5316;&#x6570;&#x5B57;&#x4E3A;&#x6D6E;&#x70B9;&#x6570;&#x3002;&#x7531;&#x4E8E;&#x6307;&#x5B9A;&#x7684;&#x6700;&#x5C0F;&#x5B57;&#x6BB5;&#x5BBD;&#x5EA6;&#xFF08;5&#xFF09;&#x5C0F;&#x4E8E;&#x683C;&#x5F0F;&#x5316;&#x540E;&#x6570;&#x5B57;&#x7684;&#x5B9E;&#x9645;&#x5BBD;&#x5EA6;&#xFF0C;&#x56E0;&#x6B64;&#x524D;&#x5BFC;&#x96F6;&#x8FD9;&#x4E00;&#x547D;&#x4EE4;&#x5B9E;&#x9645;&#x4E0A;&#x6CA1;&#x6709;&#x8D77;&#x5230;&#x4F5C;&#x7528;&#x3002;</td>
+</tr>
+<tr>
+<td>380</td>
+<td>&quot;%010.5f&quot;</td>
+<td>0380.00000</td>
+<td>&#x5C06;&#x6700;&#x5C0F;&#x5B57;&#x6BB5;&#x5BBD;&#x5EA6;&#x589E;&#x52A0;&#x5230;10&#xFF0C;&#x524D;&#x5BFC;&#x96F6;&#x73B0;&#x5728;&#x53D8;&#x5F97;&#x53EF;&#x89C1;&#x3002;</td>
+</tr>
+<tr>
+<td>380</td>
+<td>&quot;%+d&quot;</td>
+<td>+380</td>
+<td>&#x4F7F;&#x7528;+&#x6807;&#x5FD7;&#x6807;&#x8BB0;&#x6B63;&#x6570;&#x3002;</td>
+</tr>
+<tr>
+<td>380</td>
+<td>&quot;%-d&quot;</td>
+<td>380</td>
+<td>&#x4F7F;&#x7528;-&#x6807;&#x5FD7;&#x5DE6;&#x5BF9;&#x9F50;</td>
+</tr>
+<tr>
+<td>abcdefghijk</td>
+<td>&quot;%5s&quot;</td>
+<td>abcedfghijk</td>
+<td>&#x7528;&#x6700;&#x5C0F;&#x5B57;&#x6BB5;&#x5BBD;&#x5EA6;&#x683C;&#x5F0F;&#x5316;&#x5B57;&#x7B26;&#x4E32;&#x3002;</td>
+</tr>
+<tr>
+<td>abcdefghijk</td>
+<td>&quot;%d&quot;</td>
+<td>abcde</td>
+<td>&#x5BF9;&#x5B57;&#x7B26;&#x4E32;&#x5E94;&#x7528;&#x7CBE;&#x5EA6;&#xFF0C;&#x5B83;&#x88AB;&#x4ECE;&#x4E2D;&#x622A;&#x65AD;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x5316;&#x7CFB;&#x7EDF;"><a name="&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x5316;&#x7CFB;&#x7EDF;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x5316;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x5316;&#x7CFB;&#x7EDF;</h3>
+<p>groff&#xFF1A;&#x4E00;&#x5957;&#x7528;GNU&#x5B9E;&#x73B0; troff &#x7684;&#x7A0B;&#x5E8F;&#x3002;&#x5B83;&#x8FD8;&#x5305;&#x62EC;&#x4E00;&#x4E2A;&#x811A;&#x672C;&#xFF0C;&#x7528;&#x6765;&#x6A21;&#x4EFF; nroff &#x548C;&#x5176;&#x4ED6; roff &#x5BB6;&#x65CF;&#x3002;linux&#x624B;&#x518C;&#x9875;&#x7531; groff &#x6E32;&#x67D3;&#xFF0C;&#x4F7F;&#x7528; mandoc &#x5B8F;&#x5305;&#x3002;</p>
+<pre class="language-"><code class="lang-shell"># &#x9ED8;&#x8BA4;&#x4EE5; PostScript&#x683C;&#x5F0F;&#x8F93;&#x51FA;&#xFF0C;&#x8FD9;&#x91CC;&#x5236;&#x5B9A;&#x4E86;ascii&#x683C;&#x5F0F;
+zcat /usr/share/man/man1/ls.1.gz | groff -mandoc -ascii | head
+</code></pre>
+<pre class="language-"><code class="lang-shell"># PostScript &#x8F93;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x8F6C;&#x6362;&#x4E3A;PDF&#x6587;&#x4EF6;&#xFF1A;
+ps2pdf ~/Desktop/foo.ps ~/Desktop/ls.pdf
+</code></pre>
+<p>&#x5C06; -t &#x9009;&#x9879;&#x6DFB;&#x52A0;&#x5230; groff &#x6307;&#x793A;&#x5B83;&#x7528; tbl &#x9884;&#x5904;&#x7406;&#x6587;&#x672C;&#x6D41;&#x3002;&#x540C;&#x6837;&#x5730;&#xFF0C;-T &#x9009;&#x9879;&#x7528;&#x4E8E;&#x8F93;&#x51FA;&#x5230; ASCII &#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x9ED8;&#x8BA4;&#x7684;&#x8F93;&#x51FA;&#x4ECB;&#x8D28; PostScript&#x3002;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2018 S all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2018-09-21 09:31:23
+</span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03-task-and-tools-1.html" class="navigation navigation-prev " aria-label="Previous page: 常见任务和基本工具(上篇)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="05-compile-program.html" class="navigation navigation-next " aria-label="Next page: 编译程序">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"常见任务和基本工具(下篇)","date":"2018-09-19T23:29:08.000Z","updated":"2018-09-19T23:29:08.000Z","description":"Linux入门必备","categories":["linux","技术"],"tags":["shell","ubuntu","技术"],"level":"2.4","depth":1,"next":{"title":"编译程序","level":"2.5","depth":1,"path":"post/05-compile-program.md","ref":"post/05-compile-program.md","articles":[]},"previous":{"title":"常见任务和基本工具(上篇)","level":"2.3","depth":1,"path":"post/03-task-and-tools-1.md","ref":"post/03-task-and-tools-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-plus@^0.0.11","-highlight","-livereload","simple-page-toc@^0.1.1","github@^2.0.0","github-buttons@2.1.0","edit-link@^2.0.2","prism@^2.1.0","prism-themes@^0.0.2","advanced-emoji@^0.2.1","anchors@^0.7.1","include-codeblock@^3.0.2","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","mermaid-gb3@2.1.0","tbfed-pagefooter@^0.0.1","expandable-chapters-small@^0.1.7","sectionx@^3.1.0","donate@^1.0.2","local-video@^1.0.1","sitemap-general@^0.1.1","anchor-navigation-ex@0.1.8","favicon@^0.0.2","todo@^0.1.3","3-ba@^0.9.0","terminal@^0.3.2","alerts@^0.2.0","include-csv@^0.1.0","puml@^1.0.1","musicxml@^1.0.2","klipse@^1.2.0","rss@^3.0.2","-sharing","sharing-plus@^0.0.2","graph@^0.1.0","chart@^0.2.0","ga","copy-code-button","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 2018 S","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"include-csv":{},"emphasize":{},"ace":{},"github":{"url":"https://github.com/ds-ebooks/Linux.git"},"puml":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"donate":{"alipay":"https://raw.githubusercontent.com/ds19991999/ds19991999.github.io/master/assets/images/alipayimg.jpg","alipayText":"支付宝打赏","button":"赏","title":"意思意思？","wechat":"https://raw.githubusercontent.com/ds19991999/ds19991999.github.io/master/assets/images/weipayimg.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://ds-ebooks.github.io/Linux/"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"Linux入门笔记","description":"Linux入门必备知识.","author":"S","feed_url":"http://ds-ebooks.github.io/Linux/sitmap.xml","site_url":"http://ds-ebooks.github.io/Linux/","managingEditor":"super@ds-vip.top","webMaster":"super@ds-vip.top"},"musicxml":{},"sectionx":{"tag":"b"},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":{"shortcut":"favicon.png","bookmark":"favicon.png"},"theme-comscore":{},"prism-themes":{},"alerts":{},"github-buttons":{"repo":"ds-ebooks/Linux","types":["star","watch","fork"],"size":"small"},"3-ba":{"configuration":"auto","token":"e0f7e2879e5634cc0f587da6721b6860"},"expandable-chapters-small":{},"local-video":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-123686345-1"},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon","qq","qzone"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"edit-link":{"label":"Edit","base":"https://github.com/ds-ebooks/Linux/edit/gh-pages"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"S","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Linux入门笔记","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"https://www.ds-vip.top"}},"gitbook":"3.2.3","description":"Linux入门必备知识."},"file":{"path":"post/04-task-and-tools-2.md","mtime":"2018-09-21T01:31:23.066Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-21T08:31:22.861Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/osmd.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/musicxml.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/promise.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

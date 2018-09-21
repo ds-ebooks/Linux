@@ -1,0 +1,705 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Shell环境 · Linux入门笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="了解一下shell环境">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="S">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03-task-and-tools-1.html" />
+    
+    
+    <link rel="prev" href="01-learn-shell.html" />
+    
+
+    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    <script src="../gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="../gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    <link href="http://ds-ebooks.github.io/Linux/sitmap.xml" title="Linux入门笔记" rel="alternate" type="application/rss+xml" />
+
+    
+        <link rel="shortcut icon" href='../favicon.png' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../favicon.png' type="image/x-icon">
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"ds-ebooks/Linux","types":["star","watch","fork"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.ds-vip.top" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Linux入门</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="01-learn-shell.html">
+            
+                <a href="01-learn-shell.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    学习Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="02-config-and-environments.html">
+            
+                <a href="02-config-and-environments.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Shell环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="03-task-and-tools-1.html">
+            
+                <a href="03-task-and-tools-1.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    常见任务和基本工具(上篇)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="04-task-and-tools-2.html">
+            
+                <a href="04-task-and-tools-2.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    常见任务和基本工具(下篇)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="05-compile-program.html">
+            
+                <a href="05-compile-program.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    编译程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Shell环境</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="shell-&#x73AF;&#x5883;"><a name="shell-&#x73AF;&#x5883;" class="anchor-navigation-ex-anchor" href="#shell-&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>shell &#x73AF;&#x5883;</h2>
+<p>&#x5927;&#x591A;&#x6570;&#x7A0B;&#x5E8F;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6765;&#x5B58;&#x50A8;&#x7A0B;&#x5E8F;&#x8BBE;&#x7F6E;&#xFF0C; &#x4E00;&#x4E9B;&#x7A0B;&#x5E8F;&#x4F1A;&#x6839;&#x636E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6765;&#x8C03;&#x6574;&#x4ED6;&#x4EEC;&#x7684;&#x884C;&#x4E3A;&#x3002;shell &#x5728;&#x73AF;&#x5883;&#x4E2D;&#x5B58;&#x50A8;&#x4E86;&#x4E24;&#x79CD;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF1A;Shell &#x53D8;&#x91CF;&#x662F; bash &#x5B58;&#x653E;&#x7684;&#x5C11;&#x91CF;&#x6570;&#x636E;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x90FD;&#x662F; &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;&#x53E6;&#x5916;&#x8FD8;&#x6709;&#x522B;&#x540D;&#x548C; shell &#x51FD;&#x6570;&#x3002;</p>
+<pre class="language-"><code class="lang-shell">printenv - &#x6253;&#x5370;&#x90E8;&#x5206;&#x6216;&#x6240;&#x6709;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;
+set - &#x8BBE;&#x7F6E; shell &#x9009;&#x9879;
+export &#x2014; &#x5BFC;&#x51FA;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x8BA9;&#x968F;&#x540E;&#x6267;&#x884C;&#x7684;&#x7A0B;&#x5E8F;&#x77E5;&#x9053;&#x3002;
+alias - &#x521B;&#x5EFA;&#x547D;&#x4EE4;&#x522B;&#x540D;
+</code></pre>
+<h3 id="&#x68C0;&#x67E5;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><a name="&#x68C0;&#x67E5;&#x73AF;&#x5883;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x68C0;&#x67E5;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x68C0;&#x67E5;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h3>
+<ul>
+<li>&#x67E5;&#x770B;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF1A;<ul>
+<li>&#x5185;&#x5EFA;&#x547D;&#x4EE4; set&#xFF1A;&#x53EF;&#x4EE5; &#x663E;&#x793A; shell &#x6216;&#x73AF;&#x5883;&#x53D8;&#x91CF;</li>
+<li>printenv&#x7A0B;&#x5E8F;&#xFF1A;&#x53EA;&#x662F;&#x663E;&#x793A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;<code>$ printenv | less</code></li>
+</ul>
+</li>
+</ul>
+<pre class="language-"><code class="lang-shell"># printenv &#x547D;&#x4EE4;&#x4E5F;&#x80FD;&#x591F;&#x5217;&#x51FA;&#x7279;&#x5B9A;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x503C;
+alien@localhost:~$  printenv USER
+alien
+# echo &#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x5185;&#x5BB9;
+alien@localhost:~$ echo $HOME
+/home/alien
+</code></pre>
+<p>&#x522B;&#x540D;&#x65E0;&#x6CD5;&#x901A;&#x8FC7;&#x4F7F;&#x7528; set &#x6216; printenv &#x6765;&#x67E5;&#x770B;&#x3002; &#x7528;&#x4E0D;&#x5E26;&#x53C2;&#x6570;&#x7684; alias &#x6765;&#x67E5;&#x770B;&#x522B;&#x540D;:</p>
+<pre class="language-"><code class="lang-less">alien<span class="token variable">@localhost<span class="token punctuation">:</span></span>~$ alias
+alias alert=<span class="token string">&apos;notify-send --urgency=low -i &quot;$([ $? = 0 ] &amp;&amp; echo terminal || echo error)&quot; &quot;$(history|tail -n1|sed -e &apos;</span>\<span class="token string">&apos;&apos;</span>s<span class="token operator">/</span>^\s<span class="token operator">*</span>[0<span class="token operator">-</span>9]\<span class="token operator">+</span>\s<span class="token operator">*</span><span class="token comment">//;s/[;&amp;|]\s*alert$//&apos;\&apos;&apos;)&quot;&apos;</span>
+alias egrep=<span class="token string">&apos;egrep --color=auto&apos;</span>
+alias fgrep=<span class="token string">&apos;fgrep --color=auto&apos;</span>
+alias grep=<span class="token string">&apos;grep --color=auto&apos;</span>
+alias l=<span class="token string">&apos;ls -CF&apos;</span>
+alias la=<span class="token string">&apos;ls -A&apos;</span>
+alias ll=<span class="token string">&apos;ls -alF&apos;</span>
+alias ls=<span class="token string">&apos;ls --color=auto&apos;</span>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x73AF;&#x5883;&#x53D8;&#x91CF;</th>
+<th>&#x5185;&#x5BB9;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">DISPLAY</td>
+<td>&#x5982;&#x679C;&#x4F60;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x56FE;&#x5F62;&#x754C;&#x9762;&#x73AF;&#x5883;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x5C31;&#x662F;&#x4F60;&#x663E;&#x793A;&#x5668;&#x7684;&#x540D;&#x5B57;&#x3002;&#x901A;&#x5E38;&#xFF0C;&#x5B83;&#x662F; &quot;:0&quot;&#xFF0C; &#x610F;&#x601D;&#x662F;&#x7531; X &#x4EA7;&#x751F;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x663E;&#x793A;&#x5668;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">EDITOR</td>
+<td>&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5668;&#x7684;&#x540D;&#x5B57;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">SHELL</td>
+<td>shell &#x7A0B;&#x5E8F;&#x7684;&#x540D;&#x5B57;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">HOME</td>
+<td>&#x7528;&#x6237;&#x5BB6;&#x76EE;&#x5F55;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">LANG</td>
+<td>&#x5B9A;&#x4E49;&#x4E86;&#x5B57;&#x7B26;&#x96C6;&#x4EE5;&#x53CA;&#x8BED;&#x8A00;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">OLD_PWD</td>
+<td>&#x5148;&#x524D;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">PAGER</td>
+<td>&#x9875;&#x8F93;&#x51FA;&#x7A0B;&#x5E8F;&#x7684;&#x540D;&#x5B57;&#x3002;&#x8FD9;&#x7ECF;&#x5E38;&#x8BBE;&#x7F6E;&#x4E3A;/usr/bin/less&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">PATH</td>
+<td>&#x7531;&#x5192;&#x53F7;&#x5206;&#x5F00;&#x7684;&#x76EE;&#x5F55;&#x5217;&#x8868;&#xFF0C;&#x5F53;&#x4F60;&#x8F93;&#x5165;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x540D;&#x540E;&#xFF0C;&#x4F1A;&#x641C;&#x7D22;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x5217;&#x8868;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">PS1</td>
+<td>Prompt String 1. &#x8FD9;&#x4E2A;&#x5B9A;&#x4E49;&#x4E86;&#x4F60;&#x7684; shell &#x63D0;&#x793A;&#x7B26;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x968F;&#x540E;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF; &#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x5168;&#x9762;&#x5730;&#x5B9A;&#x5236;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">PWD</td>
+<td>&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">TERM</td>
+<td>&#x7EC8;&#x7AEF;&#x7C7B;&#x578B;&#x540D;&#x3002;&#x7C7B; Unix &#x7684;&#x7CFB;&#x7EDF;&#x652F;&#x6301;&#x8BB8;&#x591A;&#x7EC8;&#x7AEF;&#x534F;&#x8BAE;&#xFF1B;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x8BBE;&#x7F6E;&#x4F60;&#x7684;&#x7EC8;&#x7AEF;&#x4EFF;&#x771F;&#x5668;&#x6240;&#x7528;&#x7684;&#x534F;&#x8BAE;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">TZ</td>
+<td>&#x6307;&#x5B9A;&#x4F60;&#x6240;&#x5728;&#x7684;&#x65F6;&#x533A;&#x3002;&#x5927;&#x591A;&#x6570;&#x7C7B; Unix &#x7684;&#x7CFB;&#x7EDF;&#x6309;&#x7167;&#x534F;&#x8C03;&#x65F6;&#x95F4;&#x65F6; (UTC) &#x6765;&#x7EF4;&#x62A4;&#x8BA1;&#x7B97;&#x673A;&#x5185;&#x90E8;&#x7684;&#x65F6;&#x949F; &#xFF0C;&#x7136;&#x540E;&#x5E94;&#x7528;&#x4E00;&#x4E2A;&#x7531;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x6307;&#x5B9A;&#x7684;&#x504F;&#x5DEE;&#x6765;&#x663E;&#x793A;&#x672C;&#x5730;&#x65F6;&#x95F4;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:center">USER</td>
+<td>&#x4F60;&#x7684;&#x7528;&#x6237;&#x540D;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x5EFA;&#x7ACB;shell-&#x73AF;&#x5883;"><a name="&#x5EFA;&#x7ACB;shell-&#x73AF;&#x5883;" class="anchor-navigation-ex-anchor" href="#&#x5EFA;&#x7ACB;shell-&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5EFA;&#x7ACB;shell &#x73AF;&#x5883;</h3>
+<p>&#x767B;&#x5F55; shell &#x4F1A;&#x8BFB;&#x53D6;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x542F;&#x52A8;&#x6587;&#x4EF6;----&#x865A;&#x62DF;&#x63A7;&#x5236;&#x53F0;&#x4F1A;&#x8BDD;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x6587;&#x4EF6;</th>
+<th>&#x5185;&#x5BB9;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/etc/profile</td>
+<td>&#x5E94;&#x7528;&#x4E8E;&#x6240;&#x6709;&#x7528;&#x6237;&#x7684;&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x811A;&#x672C;&#x3002;</td>
+</tr>
+<tr>
+<td>~/.bash_profile</td>
+<td>&#x7528;&#x6237;&#x4E2A;&#x4EBA;&#x7684;&#x542F;&#x52A8;&#x6587;&#x4EF6;&#x3002;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x6269;&#x5C55;&#x6216;&#x91CD;&#x5199;&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x811A;&#x672C;&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;&#x3002;</td>
+</tr>
+<tr>
+<td>~/.bash_login</td>
+<td>&#x5982;&#x679C;&#x6587;&#x4EF6; ~/.bash_profile &#x6CA1;&#x6709;&#x627E;&#x5230;&#xFF0C;bash &#x4F1A;&#x5C1D;&#x8BD5;&#x8BFB;&#x53D6;&#x8FD9;&#x4E2A;&#x811A;&#x672C;&#x3002;</td>
+</tr>
+<tr>
+<td>~/.profile</td>
+<td>&#x5982;&#x679C;&#x6587;&#x4EF6; ~/.bash_profile &#x6216;&#x6587;&#x4EF6; ~/.bash_login &#x90FD;&#x6CA1;&#x6709;&#x627E;&#x5230;&#xFF0C;bash &#x4F1A;&#x8BD5;&#x56FE;&#x8BFB;&#x53D6;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x3002; &#x8FD9;&#x662F;&#x57FA;&#x4E8E; Debian &#x53D1;&#x884C;&#x7248;&#x7684;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#xFF0C;&#x6BD4;&#x65B9;&#x8BF4; Ubuntu&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x975E;&#x767B;&#x5F55; shell &#x4F1A;&#x8BDD;&#x4F1A;&#x8BFB;&#x53D6;&#x4EE5;&#x4E0B;&#x542F;&#x52A8;&#x6587;&#x4EF6;----GUI&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x6587;&#x4EF6;</th>
+<th>&#x5185;&#x5BB9;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/etc/bash.bashrc</td>
+<td>&#x5E94;&#x7528;&#x4E8E;&#x6240;&#x6709;&#x7528;&#x6237;&#x7684;&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;</td>
+</tr>
+<tr>
+<td>~/.bashrc</td>
+<td>&#x7528;&#x6237;&#x4E2A;&#x4EBA;&#x7684;&#x542F;&#x52A8;&#x6587;&#x4EF6;&#x3002;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x6269;&#x5C55;&#x6216;&#x91CD;&#x5199;&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x811A;&#x672C;&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x9664;&#x4E86;&#x8BFB;&#x53D6;&#x4EE5;&#x4E0A;&#x542F;&#x52A8;&#x6587;&#x4EF6;&#x4E4B;&#x5916;&#xFF0C;&#x975E;&#x767B;&#x5F55; shell &#x4F1A;&#x8BDD;&#x4E5F;&#x4F1A;&#x7EE7;&#x627F;&#x5B83;&#x4EEC;&#x7236;&#x8FDB;&#x7A0B;&#x7684;&#x73AF;&#x5883;&#x8BBE;&#x7F6E;&#xFF0C;&#x901A;&#x5E38;&#x662F;&#x4E00;&#x4E2A;&#x767B;&#x5F55; shell&#x3002;</p>
+<pre class="language-"><code class="lang-shell">alien@localhost:~$ cat .bashrc
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don&apos;t do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+...
+</code></pre>
+<p>PATH &#x53D8;&#x91CF;&#x7ECF;&#x5E38;&#xFF08;&#x4F46;&#x4E0D;&#x603B;&#x662F;&#xFF0C;&#x4F9D;&#x8D56;&#x4E8E;&#x53D1;&#x884C;&#x7248;&#xFF09;&#x5728; /etc/profile &#x542F;&#x52A8;&#x6587;&#x4EF6;&#x4E2D;&#x8BBE;&#x7F6E;&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x4E9B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"># &#x76EE;&#x5F55; $HOME/bin &#x5C31;&#x6DFB;&#x52A0;&#x5230;&#x4E86;&#x547D;&#x4EE4;&#x641C;&#x7D22;&#x76EE;&#x5F55;&#x5217;&#x8868;&#x4E2D;
+PATH=$PATH:$HOME/bin
+</code></pre>
+<blockquote>
+<p>Tips: &#x628A;&#x6587;&#x672C;&#x9644;&#x52A0;&#x5230;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x503C;&#x7684;&#x672B;&#x5C3E;</p>
+<pre class="language-"><code class="lang-shell">alien@localhost:~$ foo=&quot;This is some&quot;
+alien@localhost:~$ echo $foo
+This is some
+alien@localhost:~$ foo=&quot;$foo text.&quot;;echo $foo
+This is some text.
+</code></pre>
+</blockquote>
+<p><code>export PATH</code>&#xFF1A;&#x8FD9;&#x4E2A; export &#x547D;&#x4EE4;&#x544A;&#x8BC9; shell &#x8BA9;&#x8FD9;&#x4E2A; shell &#x7684;&#x5B50;&#x8FDB;&#x7A0B;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; PATH &#x53D8;&#x91CF;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<h3 id="&#x4FEE;&#x6539;-shell-&#x73AF;&#x5883;"><a name="&#x4FEE;&#x6539;-shell-&#x73AF;&#x5883;" class="anchor-navigation-ex-anchor" href="#&#x4FEE;&#x6539;-shell-&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539; shell &#x73AF;&#x5883;</h3>
+<p>&#x6DFB;&#x52A0;&#x76EE;&#x5F55;&#x5230;&#x4F60;&#x7684; PATH &#x53D8;&#x91CF;&#x6216;&#x8005;&#x662F;&#x5B9A;&#x4E49;&#x989D;&#x5916;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x8981;&#x628A;&#x8FD9;&#x4E9B;&#x66F4;&#x6539;&#x653E;&#x7F6E;&#x5230; .bash_profile &#x6587;&#x4EF6;&#x4E2D;&#xFF08;&#x6216;&#x8005;&#x5176;&#x66FF;&#x4EE3;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x53D1;&#x884C;&#x7248;&#x3002;&#x4F8B;&#x5982;&#xFF0C;Ubuntu &#x4F7F;&#x7528; .profile &#x6587;&#x4EF6;&#xFF09;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x5176;&#x5B83;&#x7684;&#x66F4;&#x6539;&#xFF0C;&#x8981;&#x653E;&#x5230; .bashrc &#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<pre class="language-"><code class="lang-shell"># &#x522B;&#x540D;
+alien@localhost:~$ ll
+&#x603B;&#x7528;&#x91CF; 332
+drwxrwxrwx 35 alien alien  4096 9&#x6708;  18 22:32 ./
+drwxr-xr-x  3 root  root   4096 11&#x6708; 29  2017 ../
+...
+</code></pre>
+<pre class="language-"><code class="lang-shell"># &#x5F3A;&#x8FEB; bash &#x91CD;&#x65B0;&#x8BFB;&#x53D6;&#x4FEE;&#x6539;&#x8FC7;&#x7684; .bashrc &#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#xFF1A;
+source .bashrc
+</code></pre>
+<h2 id="&#x81EA;&#x5B9A;&#x4E49;shell&#x63D0;&#x793A;&#x7B26;"><a name="&#x81EA;&#x5B9A;&#x4E49;shell&#x63D0;&#x793A;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x81EA;&#x5B9A;&#x4E49;shell&#x63D0;&#x793A;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x81EA;&#x5B9A;&#x4E49;Shell&#x63D0;&#x793A;&#x7B26;</h2>
+<p>&#x63D0;&#x793A;&#x7B26;&#x662F;&#x7531;&#x4E00;&#x4E2A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5B9A;&#x4E49;&#x7684;&#xFF0C;&#x53EB;&#x505A; PS1&#xFF08;&#x662F;&#x201C;prompt string one&#x201D; &#x7684;&#x7B80;&#x5199;&#xFF09;</p>
+<pre class="language-"><code class="lang-shell">alien@localhost:~$ echo $PS1
+\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$
+</code></pre>
+<p>&#x5177;&#x4F53;&#x7684;&#x4FEE;&#x6539;&#x8BE6;&#x89C1;&#xFF1A;<a href="https://billie66.github.io/TLCL/book/chap14.html" target="_blank">https://billie66.github.io/TLCL/book/chap14.html</a> &#xFF0C;&#x8FD9;&#x65B9;&#x9762;&#x4E0D;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x3002; </p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; 2018 S all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2018-09-18 23:05:19
+</span></footer> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01-learn-shell.html" class="navigation navigation-prev " aria-label="Previous page: 学习Shell">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03-task-and-tools-1.html" class="navigation navigation-next " aria-label="Next page: 常见任务和基本工具(上篇)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Shell环境","date":"2018-09-17T23:29:08.000Z","updated":"2018-09-17T23:29:08.000Z","description":"了解一下shell环境","categories":["linux","技术"],"tags":["shell","ubuntu","技术"],"level":"2.2","depth":1,"next":{"title":"常见任务和基本工具(上篇)","level":"2.3","depth":1,"path":"post/03-task-and-tools-1.md","ref":"post/03-task-and-tools-1.md","articles":[]},"previous":{"title":"学习Shell","level":"2.1","depth":1,"path":"post/01-learn-shell.md","ref":"post/01-learn-shell.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","-lunr","-search","search-plus@^0.0.11","-highlight","-livereload","simple-page-toc@^0.1.1","github@^2.0.0","github-buttons@2.1.0","edit-link@^2.0.2","prism@^2.1.0","prism-themes@^0.0.2","advanced-emoji@^0.2.1","anchors@^0.7.1","include-codeblock@^3.0.2","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","mermaid-gb3@2.1.0","tbfed-pagefooter@^0.0.1","expandable-chapters-small@^0.1.7","sectionx@^3.1.0","donate@^1.0.2","local-video@^1.0.1","sitemap-general@^0.1.1","anchor-navigation-ex@0.1.8","favicon@^0.0.2","todo@^0.1.3","3-ba@^0.9.0","terminal@^0.3.2","alerts@^0.2.0","include-csv@^0.1.0","puml@^1.0.1","musicxml@^1.0.2","klipse@^1.2.0","rss@^3.0.2","-sharing","sharing-plus@^0.0.2","graph@^0.1.0","chart@^0.2.0","ga","copy-code-button","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 2018 S","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"include-csv":{},"emphasize":{},"ace":{},"github":{"url":"https://github.com/ds-ebooks/Linux.git"},"puml":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"graph":{},"donate":{"alipay":"https://raw.githubusercontent.com/ds19991999/ds19991999.github.io/master/assets/images/alipayimg.jpg","alipayText":"支付宝打赏","button":"赏","title":"意思意思？","wechat":"https://raw.githubusercontent.com/ds19991999/ds19991999.github.io/master/assets/images/weipayimg.png","wechatText":"微信打赏"},"sitemap-general":{"prefix":"http://ds-ebooks.github.io/Linux/"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"Linux入门笔记","description":"Linux入门必备知识.","author":"S","feed_url":"http://ds-ebooks.github.io/Linux/sitmap.xml","site_url":"http://ds-ebooks.github.io/Linux/","managingEditor":"super@ds-vip.top","webMaster":"super@ds-vip.top"},"musicxml":{},"sectionx":{"tag":"b"},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":true,"isShowTocTitleIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":{"shortcut":"favicon.png","bookmark":"favicon.png"},"theme-comscore":{},"prism-themes":{},"alerts":{},"github-buttons":{"repo":"ds-ebooks/Linux","types":["star","watch","fork"],"size":"small"},"3-ba":{"configuration":"auto","token":"e0f7e2879e5634cc0f587da6721b6860"},"expandable-chapters-small":{},"local-video":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-123686345-1"},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper","linkedin","pocket","stumbleupon","qq","qzone"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"edit-link":{"label":"Edit","base":"https://github.com/ds-ebooks/Linux/edit/gh-pages"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"chart":{"type":"c3"},"search-plus":{}},"theme":"default","author":"S","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Linux入门笔记","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"https://www.ds-vip.top"}},"gitbook":"3.2.3","description":"Linux入门必备知识."},"file":{"path":"post/02-config-and-environments.md","mtime":"2018-09-18T15:05:19.386Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-21T08:31:22.861Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/osmd.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/musicxml.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/promise.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
